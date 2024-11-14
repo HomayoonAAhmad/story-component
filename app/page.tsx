@@ -1,9 +1,5 @@
-import Image from "next/image";
+import Button from "@/stories/Button";
 
 export default function Home() {
-  return (
-    <main>
-      <h1>Hello World</h1>
-    </main>
-  );
+  return <Button />;
 }
