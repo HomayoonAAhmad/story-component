@@ -1,6 +1,6 @@
-import ColorTypes from "../gcui-main/functions/ColorTypes";
+import ColorTypes from "../../gcui-main/functions/ColorTypes";
 import React, { ElementType, HTMLAttributes } from "react";
-// import Loader from "@/components/Loader";
+import Loader from "../../gcui-main/Loader";
 
 export interface ComponentProps extends HTMLAttributes<HTMLOrSVGElement> {
   tag?: ElementType;
@@ -9,6 +9,8 @@ export interface ComponentProps extends HTMLAttributes<HTMLOrSVGElement> {
   color?: ColorTypes | string;
   href?: string;
   type?: string;
+  loading?: boolean;
+  disabled?: boolean;
 }
 
 const Button: React.FC<ComponentProps> = ({
@@ -19,7 +21,7 @@ const Button: React.FC<ComponentProps> = ({
   ...props
 }) => {
   const color = props.color || ColorTypes.default;
-  //   let loading = props.loading ? true : false;
+  let loading = props.loading ? true : false;
 
   let className =
     "text-slate-50 h-10 px-4 rounded-xl  items-center transition-all duration-500  inline-flex gap-4 whitespace-nowrap";
@@ -62,11 +64,12 @@ const Button: React.FC<ComponentProps> = ({
     <Tag
       {...props}
       className={className}
-      // disabled={props.loading || props.disabled ? true : false}
+      disabled={props.loading || props.disabled ? true : false}
     >
-      {children}
-      {icon}
-      {particularium}
+      {!loading && children}
+      {!loading && icon}
+      {!loading && particularium}
+      {loading && <Loader />}
     </Tag>
   );
 };

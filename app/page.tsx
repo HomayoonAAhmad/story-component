@@ -1,5 +1,5 @@
-import Button from "@/stories/Button";
+import Button from "@/stories/stories-Button/Button";
 
 export default function Home() {
-  return <Button />;
+  return <Button color="primary">Click</Button>;
 }
