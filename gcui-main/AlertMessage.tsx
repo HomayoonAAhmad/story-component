@@ -1,5 +1,5 @@
 import { H2, Paragraph } from "./Typo";
-import Button from "../stories/stories-Button/Button";
+import Button from "../stories/Button";
 import Blocks from "./Blocks";
 import content from "@/types/Content";
 

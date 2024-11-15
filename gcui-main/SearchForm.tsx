@@ -1,7 +1,7 @@
 "use client";
 import Modal from "./Modal";
 import { useState } from "react";
-import Button from "../stories/stories-Button/Button";
+import Button from "../stories/Button";
 import ColorTypes from "./functions/ColorTypes";
 import Search from "@/components/forms/Search";
 

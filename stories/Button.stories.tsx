@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryFn } from "@storybook/react";
 import Button from "./Button"; // Update the path as needed
-import ColorTypes from "../../gcui-main/functions/ColorTypes";
+import ColorTypes from "../gcui-main/functions/ColorTypes";
 import { ComponentProps } from "./Button"; // Reuse the existing types
 
 export default {
