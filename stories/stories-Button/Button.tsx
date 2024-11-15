@@ -1,6 +1,6 @@
-import ColorTypes from "../gcui-main/functions/ColorTypes";
+import ColorTypes from "../../gcui-main/functions/ColorTypes";
 import React, { ElementType, HTMLAttributes } from "react";
-import Loader from "../gcui-main/Loader";
+import Loader from "../../gcui-main/Loader";
 
 export interface ComponentProps extends HTMLAttributes<HTMLOrSVGElement> {
   tag?: ElementType;

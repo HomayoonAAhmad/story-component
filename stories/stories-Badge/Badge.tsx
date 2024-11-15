@@ -1,5 +1,5 @@
 import colorTypes from "../../gcui-main/functions/ColorTypes";
-interface BadgeProps {
+export interface BadgeProps {
   color?: colorTypes;
   children: React.ReactNode;
   particular?: boolean;

@@ -1,15 +1,10 @@
-import React from "react";
 import { Meta, StoryFn } from "@storybook/react";
-import Button from "./Button"; // Update the path as needed
-import ColorTypes from "../gcui-main/functions/ColorTypes";
-import { ComponentProps } from "./Button"; // Reuse the existing types
+import ColorTypes from "../../gcui-main/functions/ColorTypes";
+import Button, { ComponentProps } from "./Button";
 
 export default {
   title: "Components/Button",
   component: Button,
-  parameters: {
-    layout: "centered",
-  },
   argTypes: {
     tag: { control: "text" },
     particular: { control: "boolean" },
@@ -32,9 +27,9 @@ export default {
   },
 } as Meta<typeof Button>;
 
-const Template: StoryFn<ComponentProps> = (args) => <Button {...args} />;
+const button: StoryFn<ComponentProps> = (args) => <Button {...args} />;
 
-export const Default = Template.bind({});
+export const Default = button.bind({});
 Default.args = {
   children: "Default Button",
   color: ColorTypes.default,
@@ -42,49 +37,49 @@ Default.args = {
   disabled: false,
 };
 
-export const Primary = Template.bind({});
+export const Primary = button.bind({});
 Primary.args = {
   children: "Primary Button",
   color: ColorTypes.primary,
 };
 
-export const Danger = Template.bind({});
+export const Danger = button.bind({});
 Danger.args = {
   children: "Danger Button",
   color: ColorTypes.danger,
 };
 
-export const Success = Template.bind({});
+export const Success = button.bind({});
 Success.args = {
   children: "Success Button",
   color: ColorTypes.success,
 };
 
-export const Dark = Template.bind({});
+export const Dark = button.bind({});
 Dark.args = {
   children: "Dark Button",
   color: ColorTypes.dark,
 };
 
-export const Loading = Template.bind({});
+export const Loading = button.bind({});
 Loading.args = {
   children: "Loading Button",
   loading: true,
 };
 
-export const Disabled = Template.bind({});
+export const Disabled = button.bind({});
 Disabled.args = {
   children: "Disabled Button",
   disabled: true,
 };
 
-export const WithIcon = Template.bind({});
+export const WithIcon = button.bind({});
 WithIcon.args = {
   children: "Button with Icon",
   icon: <span>🚀</span>,
 };
 
-export const LinkButton = Template.bind({});
+export const LinkButton = button.bind({});
 LinkButton.args = {
   children: "Link Button",
   href: "https://example.com",

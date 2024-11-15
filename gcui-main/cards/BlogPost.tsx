@@ -1,4 +1,4 @@
-import Button from "../../stories/Button";
+import Button from "../../stories/stories-Button/Button";
 import colorTypes from "../functions/ColorTypes";
 import { H2, H3, Paragraph } from "../Typo";
 import Blocks from "../Blocks";
