@@ -1,5 +1,5 @@
 import MenuItem from "./MenuItem";
-import Button from "../stories/stories-Button/Button";
+import Button from "../stories/Button/Button";
 import SearchForm from "./SearchForm";
 import Badge from "./Badge";
 import Device from "./functions/Device";

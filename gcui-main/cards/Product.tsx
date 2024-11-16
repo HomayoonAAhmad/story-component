@@ -1,6 +1,6 @@
-import Blocks from "../../stories/stories-Blocks/Blocks";
-import { H2, Paragraph } from "../Typo";
-import Button from "../../stories/stories-Button/Button";
+import Blocks from "../../stories/Blocks/Blocks";
+import { H2, Paragraph } from "../../stories/Typo/Typo";
+import Button from "../../stories/Button/Button";
 import ColorTypes from "../functions/ColorTypes";
 import Image from "../Image";
 import content from "@/types/Content";

@@ -1,5 +1,5 @@
-import Blocks from "../../stories/stories-Blocks/Blocks";
-import { H3, Paragraph } from "../Typo";
+import Blocks from "../../stories/Blocks/Blocks";
+import { H3, Paragraph } from "../../stories/Typo/Typo";
 import Image from "../Image";
 import Content from "@/types/Content";
 import Button from "@/components/Button";

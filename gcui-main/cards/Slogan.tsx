@@ -1,5 +1,5 @@
-import Blocks from "../../stories/stories-Blocks/Blocks";
-import { H2, Paragraph } from "../Typo";
+import Blocks from "../../stories/Blocks/Blocks";
+import { H2, Paragraph } from "../../stories/Typo/Typo";
 import Image from "../Image";
 interface SloganProps {
   media: string;

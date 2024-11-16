@@ -1,4 +1,4 @@
-import Blocks from "../../stories/stories-Blocks/Blocks";
+import Blocks from "../../stories/Blocks/Blocks";
 import React, { useEffect } from "react";
 import Language from "@/locales/Language";
 import Button from "@/components/Button";

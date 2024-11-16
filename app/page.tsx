@@ -1,5 +1,5 @@
-import Button from "@/stories/stories-Button/Button";
+import Slogan from "@/gcui-main/cards/Slogan";
 
 export default function Home() {
-  return <Button color="primary">Click</Button>;
+  return <Slogan media="" title="" description="" particular={true} />;
 }

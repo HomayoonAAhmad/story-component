@@ -10,13 +10,9 @@ const preview: Preview = {
       },
     },
     layout: "centered",
-    backgrounds: {
-      default: "black",
-      values: [{ name: "black", value: "#212121" }],
-    },
   },
 
-  tags: ["autodocs", "autodocs"]
+  tags: ["autodocs", "autodocs"],
 };
 
 export default preview;
