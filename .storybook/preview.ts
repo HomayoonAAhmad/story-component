@@ -15,6 +15,8 @@ const preview: Preview = {
       values: [{ name: "black", value: "#212121" }],
     },
   },
+
+  tags: ["autodocs"]
 };
 
 export default preview;

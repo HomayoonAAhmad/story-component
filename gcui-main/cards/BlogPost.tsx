@@ -1,7 +1,7 @@
 import Button from "../../stories/stories-Button/Button";
 import colorTypes from "../functions/ColorTypes";
 import { H2, H3, Paragraph } from "../Typo";
-import Blocks from "../Blocks";
+import Blocks from "../../stories/stories-Blocks/Blocks";
 import Image from "../Image";
 import ContentType from "@/types/Content";
 import Language from "@/locales/Language";
