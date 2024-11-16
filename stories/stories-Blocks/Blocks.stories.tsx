@@ -32,14 +32,12 @@ type Story = StoryObj<typeof meta>;
 export const DarkBlock: Story = {
   args: {
     children: "Dark Block Content",
-    particular: false,
   },
 };
 
 export const DarkBlockParticular: Story = {
   args: {
     children: "Dark Block with Particular Styling",
-    particular: true,
   },
 };
 
@@ -57,6 +55,7 @@ export const GradientBlockParticular: Story = {
   args: {
     children: "Gradient Block with Particular Styling",
     particular: true,
+    className: "text-white",
   },
 };
 
