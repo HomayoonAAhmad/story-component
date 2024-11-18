@@ -47,3 +47,10 @@ Success.args = {
   message: "This is a success message.",
   color: ColorTypes.success,
 };
+
+export const DangerLong = Template.bind({});
+DangerLong.args = {
+  message:
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius voluptatum eligendi, quam perferendis consequatur delectus dolor ex temporibus, aspernatur vel deleniti necessitatibus explicabo pariatur! Blanditiis assumenda rem optio amet nam.",
+  color: ColorTypes.danger,
+};
