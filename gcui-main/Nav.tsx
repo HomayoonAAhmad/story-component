@@ -1,12 +1,12 @@
 import MenuItem from "./MenuItem";
 import Button from "../stories/Button/Button";
 import SearchForm from "./SearchForm";
-import Badge from "./Badge";
+import Badge from "@/stories/Badge/Badge";
 import Device from "./functions/Device";
-import ColorTypes from "./functions/ColorTypes.ts";
+import ColorTypes from "./functions/ColorTypes";
 import Image from "./Image";
-import NavbarBars from "@/components/NavbarBars";
-import ActionBarDesktop from "@/components/ActionBarDesktop";
+import NavbarBars from "./NavbarBars";
+import ActionBarDesktop from "./ActionBarDesktop";
 
 //just in development :
 export const fetchCache = "force-no-store";

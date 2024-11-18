@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Button from "../Button/Button";
+import Button from "@/stories/Button/Button";
 import ColorTypes from "@/gcui-main/functions/ColorTypes";
 
 interface AttachmentProps {

@@ -1,10 +1,10 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Badge from "@/components/Badge";
-import ColorTypes from "@/components/functions/ColorTypes";
-import Language from "@/locales/Language";
-import ActionBarBasket from "@/components/ActionBarBasket";
+import Badge from "@/stories/Badge/Badge";
+import ColorTypes from "./functions/ColorTypes";
+import Language from "./locales/Language";
+import ActionBarBasket from "./ActionBarBasket";
 
 const ActionBar = () => {
   const language = Language("common");

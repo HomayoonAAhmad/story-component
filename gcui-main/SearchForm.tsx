@@ -3,7 +3,7 @@ import Modal from "./Modal";
 import { useState } from "react";
 import Button from "../stories/Button/Button";
 import ColorTypes from "./functions/ColorTypes";
-import Search from "@/components/forms/Search";
+import Search from "./forms/Search";
 
 export default function SearchForm() {
   const [open, setOpen] = useState(false);

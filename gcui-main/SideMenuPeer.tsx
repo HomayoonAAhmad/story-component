@@ -1,13 +1,14 @@
-"use client"
+"use client";
 
-import {useSyncExternalStore} from "react";
-import {MenuStores} from "@/components/stores/menuStore";
+import { useSyncExternalStore } from "react";
+import { MenuStores } from "./stores/menuStore";
 
 const SideMenuPeer = () => {
-	const open = useSyncExternalStore(MenuStores.subscribe, MenuStores.getSnapshot, MenuStores.getServerSnapshot);
-	return (
-		<div className={`${open?"menu-open":""} peer`} />
-	)
-
-}
+  const open = useSyncExternalStore(
+    MenuStores.subscribe,
+    MenuStores.getSnapshot,
+    MenuStores.getServerSnapshot
+  );
+  return <div className={`${open ? "menu-open" : ""} peer`} />;
+};
 export default SideMenuPeer;

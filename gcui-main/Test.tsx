@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/components/Button";
+import Button from "@/stories/Button/Button";
 import { Auth_logout } from "./functions/Auth";
 import { redirect } from "next/navigation";
 import { useRouter } from "next/navigation";

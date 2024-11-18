@@ -1,7 +1,7 @@
 import { H2, Paragraph } from "../stories/Typo/Typo";
 import Button from "../stories/Button/Button";
 import Blocks from "../stories/Blocks/Blocks";
-import content from "@/types/Content";
+import content from "./types/Content";
 
 const AlertMessage = ({ data }: { data: content }) => {
   if (!data) {
