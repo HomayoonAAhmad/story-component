@@ -1,6 +1,6 @@
 "use client";
 import Language from "../locales/Language";
-import Input from "../Input";
+import Input from "../../stories/Input/Input";
 import Button from "@/stories/Button/Button";
 import { useState } from "react";
 import { Auth_confirmSms, Auth_sendSms } from "../functions/Auth";

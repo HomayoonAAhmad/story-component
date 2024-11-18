@@ -6,12 +6,9 @@ export default {
   component: TextArea,
 
   argTypes: {
-    ltr: {
-      control: "boolean",
-    },
-    loading: {
-      control: "boolean",
-    },
+    ltr: { control: "boolean" },
+    loading: { control: "boolean" },
+    icon: { control: "text" },
     className: { control: "text" },
     disabled: { control: "boolean" },
     children: { control: "text" },

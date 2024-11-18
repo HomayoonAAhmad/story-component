@@ -1,7 +1,7 @@
 import React from "react";
-import Loader from "./Loader";
+import Loader from "../../gcui-main/Loader";
 
-interface inputProps {
+export interface inputProps {
   icon?: React.ReactNode;
   ltr?: boolean | undefined;
   className?: string;

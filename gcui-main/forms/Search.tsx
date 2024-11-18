@@ -1,6 +1,6 @@
 "use client";
 import Language from "../locales/Language";
-import Input from "../Input";
+import Input from "../../stories/Input/Input";
 import { H2 } from "../../stories/Typo/Typo";
 import { redirect, useSearchParams } from "next/navigation";
 

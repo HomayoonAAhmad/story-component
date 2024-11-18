@@ -1,7 +1,7 @@
 import language from "./locales/Language";
 import Button from "@/stories/Button/Button";
 import Language from "./locales/Language";
-import Input from "./Input";
+import Input from "../stories/Input/Input";
 import Blocks from "@/stories/Blocks/Blocks";
 import Loader from "./Loader";
 
