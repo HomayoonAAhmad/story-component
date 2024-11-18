@@ -2,9 +2,9 @@
 
 import { usePathname } from "next/navigation";
 import Badge from "@/stories/Badge/Badge";
-import ColorTypes from "./functions/ColorTypes";
-import Language from "./locales/Language";
-import ActionBarBasket from "./ActionBarBasket";
+import ColorTypes from "../../gcui-main/functions/ColorTypes";
+import Language from "../../gcui-main/locales/Language";
+import ActionBarBasket from "../../gcui-main/ActionBarBasket";
 
 const ActionBar = () => {
   const language = Language("common");

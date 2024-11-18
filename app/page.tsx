@@ -1,5 +1,5 @@
-import Slogan from "@/gcui-main/cards/Slogan";
+import Login from "@/gcui-main/forms/Login";
 
 export default function Home() {
-  return <Slogan media="" title="" description="" particular={true} />;
+  return <Login />;
 }

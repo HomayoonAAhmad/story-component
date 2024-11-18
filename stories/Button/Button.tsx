@@ -9,8 +9,8 @@ export interface ComponentProps extends HTMLAttributes<HTMLOrSVGElement> {
   color?: ColorTypes | string;
   href?: string;
   type?: string;
-  loading?: boolean;
-  disabled?: boolean;
+  disabled?: boolean | number;
+  loading?: boolean | number;
 }
 
 const Button: React.FC<ComponentProps> = ({

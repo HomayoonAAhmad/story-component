@@ -2,7 +2,7 @@ import Blocks from "../../stories/Blocks/Blocks";
 import { H2, Paragraph } from "../../stories/Typo/Typo";
 import Button from "../../stories/Button/Button";
 import ColorTypes from "../functions/ColorTypes";
-import content from "@/types/Content";
+import content from "../types/Content";
 import { bool } from "prop-types";
 
 export default function Service({ service }: { service: content }) {

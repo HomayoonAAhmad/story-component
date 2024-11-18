@@ -1,6 +1,6 @@
 import { H3, Paragraph } from "../../stories/Typo/Typo";
 import Image from "../Image";
-import Content from "@/types/Content";
+import Content from "../types/Content";
 
 const Quote = ({ data }: Readonly<Content>) => {
   if (!data) {

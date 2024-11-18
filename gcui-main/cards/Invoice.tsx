@@ -1,9 +1,9 @@
 import Blocks from "../../stories/Blocks/Blocks";
 import React, { useEffect } from "react";
-import Language from "@/locales/Language";
-import Button from "@/components/Button";
-import { getInvoice } from "@/models/InvoiceModel";
-import Loader from "@/components/Loader";
+import Language from "../locales/Language";
+import Button from "@/stories/Button/Button";
+import { getInvoice } from "../models/InvoiceModel";
+import Loader from "../Loader";
 
 const Invoice = ({ invoice }) => {
   const [dbInvoice, setDbInvoice] = React.useState({});
