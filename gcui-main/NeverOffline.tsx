@@ -1,5 +1,5 @@
 "use client";
-import Switch from "./Switch";
+import Switch from "../stories/Switch/Switch";
 import { useState } from "react";
 import Modal from "./Modal";
 import { H1 } from "../stories/Typo/Typo";
