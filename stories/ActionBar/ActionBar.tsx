@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import Badge from "@/stories/Badge/Badge";
 import ColorTypes from "../../gcui-main/functions/ColorTypes";
 import Language from "../../gcui-main/locales/Language";
-import ActionBarBasket from "../../gcui-main/ActionBarBasket";
+import ActionBarBasket from "../ActionBarBasket/ActionBarBasket";
 
 const ActionBar = () => {
   const language = Language("common");

@@ -1,8 +1,8 @@
-import Blocks from "../../stories/Blocks/Blocks";
-import { H2, Paragraph } from "../../stories/Typo/Typo";
-import Button from "../../stories/Button/Button";
-import ColorTypes from "../functions/ColorTypes";
-import content from "../types/Content";
+import Blocks from "../Blocks/Blocks";
+import { H2, Paragraph } from "../Typo/Typo";
+import Button from "../Button/Button";
+import ColorTypes from "../../gcui-main/functions/ColorTypes";
+import content from "../../gcui-main/types/Content";
 import { bool } from "prop-types";
 
 export default function Service({ service }: { service: content }) {

@@ -1,5 +1,5 @@
-import { H3, Paragraph } from "../../stories/Typo/Typo";
-interface FinancialCardProps {
+import { H3, Paragraph } from "../Typo/Typo";
+export interface FinancialCardProps {
   number: number;
   title: string;
   description: string;

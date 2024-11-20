@@ -2,8 +2,6 @@ import Blocks from "../../stories/Blocks/Blocks";
 import { H3, Paragraph } from "../../stories/Typo/Typo";
 import Image from "../Image";
 import Content from "../types/Content";
-import Button from "@/stories/Button/Button";
-import ColorTypes from "../functions/ColorTypes";
 
 export default function Project({ data }: { data: Content }) {
   if (!data) {

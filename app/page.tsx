@@ -1,5 +1,5 @@
-import Login from "@/gcui-main/forms/Login";
+import ActionBar from "@/stories/ActionBar/ActionBar";
 
 export default function Home() {
-  return <Login />;
+  return <ActionBar />;
 }
