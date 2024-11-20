@@ -59,8 +59,8 @@ export const LargeNumber: financial = {
 export const CustomTheme: financial = {
   args: {
     number: 89,
-    title: "Customer Satisfaction",
-    description: "Average rating out of 100",
+    title: "رضایت مشتری",
+    description: "متوسط آن یاسبنرشاسیبن است",
     icon: "smile",
   },
 };
