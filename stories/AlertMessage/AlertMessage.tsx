@@ -1,29 +1,35 @@
-import { H2, Paragraph } from "../stories/Typo/Typo";
-import Button from "../stories/Button/Button";
-import Blocks from "../stories/Blocks/Blocks";
-import content from "./types/Content";
+import { H2, Paragraph } from "../Typo/Typo";
+import Button from "../Button/Button";
+import Blocks from "../Blocks/Blocks";
+import content from "../../gcui-main/types/Content";
 
-const AlertMessage = ({ data }: { data: content }) => {
-  if (!data) {
-    return null;
-  }
-  let extraFeatures = {
+export type AlertMessageProps = {
+  title: string;
+  short_description?: string;
+  meta?: string;
+};
+
+const AlertMessage = ({
+  title,
+  short_description,
+  meta,
+}: AlertMessageProps) => {
+  const extraFeatures = {
     url: null,
     icon: "exclamation-circle",
     btn_title: "",
-    reactionText: "",
   };
 
-  if (data && data.meta) {
+  if (meta) {
     try {
-      let temp2 = JSON.parse(data.meta);
+      let temp2 = JSON.parse(meta);
       if (temp2 && temp2.menu && temp2.menu.length > 0) {
         extraFeatures.url = temp2.menu[0].url;
         extraFeatures.icon = temp2.menu[0].icon;
         extraFeatures.btn_title = temp2.menu[0].btn_title;
       }
     } catch (e) {
-      console.log("menu data:", data.meta);
+      console.log("menu data:", meta);
     }
   }
 
@@ -40,9 +46,9 @@ const AlertMessage = ({ data }: { data: content }) => {
           </div>
         )}
         <div className={"w-full flex flex-col gap-4"}>
-          <H2 element={"div"}>{data.title}</H2>
+          <H2 element={"div"}>{title}</H2>
           <Paragraph className={"text-slate-400"} element={"p"}>
-            {data.short_description}
+            {short_description}
           </Paragraph>
         </div>
         {extraFeatures.url && (

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Meta, StoryFn } from "@storybook/react";
-import Pagination, { PaginationProps } from "@/gcui-main/Pagination"; // Adjust path as needed
+import Pagination, { PaginationProps } from "./Pagination"; // Adjust path as needed
 
 export default {
   title: "Components/Pagination",
