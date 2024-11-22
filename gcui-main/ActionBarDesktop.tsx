@@ -5,7 +5,7 @@ import MenuBasketButton from "../../gcui-main/MenuBasketButton";
 import Button from "@/stories/Button/Button";
 import ColorTypes from "../../gcui-main/functions/ColorTypes";
 import Badge from "@/stories/Badge/Badge";
-import Language from "../../gcui-main/locales/Language";
+import Language from "./locales/Language";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
