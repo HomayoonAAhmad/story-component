@@ -1,25 +1,37 @@
 "use client";
-import Image from "../Image";
-import Language from "../locales/Language";
-import { useEffect, useState } from "react";
-import Loader from "../Loader";
-import { getProfile } from "../models/AuthModel";
+import Image from "../../gcui-main/Image";
+import Language from "../../gcui-main/locales/Language";
+import React from "react";
+import Loader from "../../gcui-main/Loader";
+import { getProfile } from "../../gcui-main/models/AuthModel";
 
-const User = () => {
-  const [loading, setLoading] = useState(false);
-  const [user, setUser] = useState(null);
-  const get = async () => {
-    setLoading(true);
-    const dbUser = await getProfile();
-    if (dbUser !== null) {
-      setUser(dbUser);
-    }
-    setLoading(false);
-  };
-  useEffect(() => {
-    get();
-  }, []);
+interface UserProfile {
+  avatar?: string;
+  name?: string;
+  username: string;
+}
 
+interface UserProps {
+  user: UserProfile | null;
+  loading: boolean;
+}
+// for fetching from api
+//const User = () => {
+// const [loading, setLoading] = useState(false);
+// const [user, setUser] = useState(null);
+// const get = async () => {
+//   setLoading(true);
+//   const dbUser = await getProfile();
+//   if (dbUser !== null) {
+//     setUser(dbUser);
+//   }
+//   setLoading(false);
+// };
+// useEffect(() => {
+//   get();
+// }, []);
+
+const User = ({ user, loading }: UserProps) => {
   return (
     <div>
       {loading && (

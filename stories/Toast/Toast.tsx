@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { ToastStores } from "./stores/ToastStore";
-import ColorTypes from "./functions/ColorTypes";
+import { ToastStores } from "@/gcui-main/stores/ToastStore";
+import ColorTypes from "@/gcui-main/functions/ColorTypes";
 
 type ToastProps =
   | {

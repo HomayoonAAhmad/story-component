@@ -1,10 +1,24 @@
 import Blocks from "@/stories/Blocks/Blocks";
-import Language from "../locales/Language";
+import Language from "../../gcui-main/locales/Language";
 import Badge from "@/stories/Badge/Badge";
-import ColorTypes from "../functions/ColorTypes";
-import TicketStatus from "../../stories/TicketStatues/TicketStatus";
+import ColorTypes from "../../gcui-main/functions/ColorTypes";
+import TicketStatus from "@/stories/TicketStatues/TicketStatus";
 
-const Ticket = ({ ticket }) => {
+interface TicketProps {
+  ticket: {
+    id: string;
+    title: string;
+    priority: "low" | "medium" | "high" | "urgent";
+    messages_count: number;
+    business: {
+      name: string;
+    };
+    _status: number;
+    created_at: string;
+  };
+}
+
+const Ticket = ({ ticket }: TicketProps) => {
   return (
     <Blocks.Dark>
       <div className={"flex items-center justify-between text-xs"}>

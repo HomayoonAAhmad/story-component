@@ -1,47 +1,19 @@
-"use client";
+import Ticket from "@/stories/Ticket/Ticket";
 
-import React from "react";
-import Toast from "@/gcui-main/Toast";
-import { ToastStores } from "../gcui-main/stores/ToastStore"; // Adjust the path as needed
-import ColorTypes from "@/gcui-main/functions/ColorTypes"; // Adjust the path as needed
+const mockTicket = {
+  id: "123",
+  title: "Network Issue",
+  priority: "high",
+  messages_count: 5,
+  business: { name: "TechCorp" },
+  _status: "1",
+  created_at: "2024-11-23T14:30:00Z",
+};
 
 export default function Page() {
-  const triggerToast = () => {
-    ToastStores.setToast({
-      message: "This is a success message!",
-      title: "Success",
-      type: ColorTypes.success,
-      icon: "check-circle",
-    });
-  };
-
-  const triggerErrorToast = () => {
-    ToastStores.setToast({
-      message: "This is an error message!",
-      title: "Error",
-      type: ColorTypes.danger,
-      icon: "exclamation-circle",
-    });
-  };
-
   return (
-    <div className="p-8">
-      <h1 className="text-xl font-bold mb-4">Toast Demo</h1>
-      <button
-        className="bg-green-500 text-white px-4 py-2 rounded mr-2"
-        onClick={triggerToast}
-      >
-        Show Success Toast
-      </button>
-      <button
-        className="bg-red-500 text-white px-4 py-2 rounded"
-        onClick={triggerErrorToast}
-      >
-        Show Error Toast
-      </button>
-
-      {/* Include the Toast component */}
-      <Toast />
+    <div>
+      <Ticket ticket={mockTicket} />
     </div>
   );
 }
