@@ -2,7 +2,7 @@ import Blocks from "@/stories/Blocks/Blocks";
 import Language from "../locales/Language";
 import Badge from "@/stories/Badge/Badge";
 import ColorTypes from "../functions/ColorTypes";
-import TicketStatus from "../TicketStatus";
+import TicketStatus from "../../stories/TicketStatues/TicketStatus";
 
 const Ticket = ({ ticket }) => {
   return (

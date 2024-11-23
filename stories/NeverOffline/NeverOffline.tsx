@@ -1,11 +1,11 @@
 "use client";
-import Switch from "../stories/Switch/Switch";
+import Switch from "../Switch/Switch";
 import { useState } from "react";
-import Modal from "./Modal";
-import { H1 } from "../stories/Typo/Typo";
-import Language from "./locales/Language";
+import Modal from "../Modal/Modal";
+import { H1 } from "../Typo/Typo";
+import Language from "../../gcui-main/locales/Language";
 import Button from "@/stories/Button/Button";
-import ColorTypes from "./functions/ColorTypes";
+import ColorTypes from "../../gcui-main/functions/ColorTypes";
 
 const NeverOffline = () => {
   const [state, setState] = useState(true);

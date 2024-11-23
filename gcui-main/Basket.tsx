@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { BasketStores } from "./stores/BasketStore";
-import Modal from "./Modal";
+import Modal from "../stories/Modal/Modal";
 import { Get, Remove } from "./functions/Basket";
 import { H1, Paragraph } from "../stories/Typo/Typo";
 import { getPayable } from "./models/PayableModel";

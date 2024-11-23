@@ -11,7 +11,7 @@ import ActionBarDesktop from "./ActionBarDesktop";
 //just in development :
 export const fetchCache = "force-no-store";
 
-type authBlockProps = {
+export type authBlockProps = {
   [Language: string]: any;
 };
 

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import AlertMessage from "./AlertMessage";
 
 const meta: Meta<typeof AlertMessage> = {
-  title: "Components/AlertMessage", // Categorize under 'Components'
+  title: "Components/AlertMessage",
   component: AlertMessage,
   args: {
     title: "System Update",

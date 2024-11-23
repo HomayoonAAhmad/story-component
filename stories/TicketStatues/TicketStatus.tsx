@@ -1,6 +1,10 @@
-import Language from "./locales/Language";
+import Language from "../../gcui-main/locales/Language";
 
-const TicketStatus = ({ status }) => {
+export interface StatusProps {
+  status: number;
+}
+
+const TicketStatus = ({ status }: StatusProps) => {
   const ticketStatuses = [
     "ticket_status_closed",
     "ticket_status_open",
