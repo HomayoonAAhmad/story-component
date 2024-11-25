@@ -1,5 +1,5 @@
 import type { Preview } from "@storybook/react";
-import "../app/globals.css";
+import "../gcui-main/styles/tailwind/globals.css";
 
 const preview: Preview = {
   parameters: {
@@ -11,8 +11,12 @@ const preview: Preview = {
     },
     layout: "centered",
   },
-
-  tags: ["autodocs", "autodocs", "autodocs", "autodocs"],
+  tags: ["autodocs", "autodocs", "autodocs", "autodocs", "autodocs"],
 };
+
+// Apply the body styles
+if (typeof document !== "undefined") {
+  document.body.classList.add("bg-slate-800", "text-slate-100");
+}
 
 export default preview;

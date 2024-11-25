@@ -2,20 +2,23 @@
 @import "utilities/icons.css";
 @import "utilities/fonts.css";
 @import "utilities/animations.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer utilities {
-    .hidden-body
-    {
-        transform: translate3d(-20%,40dvh,0) scale(0.8);
-        filter: blur(5px);
-        transform-origin: left top;
-        opacity: 0.5;
-    }
-    .hidden-body-parent
-    {
-        perspective: 1500px;
-        transform-style: preserve-3d;
-    }
+  .hidden-body {
+    transform: translate3d(-20%, 40dvh, 0) scale(0.8);
+    filter: blur(5px);
+    transform-origin: left top;
+    opacity: 0.5;
+  }
+  .hidden-body-parent {
+    perspective: 1500px;
+    transform-style: preserve-3d;
+  }
+}
+body {
+  @apply bg-slate-800 text-slate-100;
 }

@@ -1,7 +1,7 @@
 import Blocks from "../../stories/Blocks/Blocks";
 import { H2, Paragraph } from "../../stories/Typo/Typo";
 import Image from "../Image";
-interface SloganProps {
+export interface SloganProps {
   media: string;
   title: string;
   description: string;

@@ -3,9 +3,9 @@ import { H2, Paragraph } from "../../stories/Typo/Typo";
 import Button from "../../stories/Button/Button";
 import ColorTypes from "../functions/ColorTypes";
 import Image from "../Image";
-import content from "../types/Content";
+// import content from "../types/Content";
 
-interface SloganProps {
+export interface SloganProps {
   media: string;
   title: string;
   description: string;

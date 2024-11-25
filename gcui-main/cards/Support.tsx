@@ -1,6 +1,6 @@
 import { H3, Paragraph } from "../../stories/Typo/Typo";
 import colorTypes from "../functions/ColorTypes";
-interface SupportProps {
+export interface SupportProps {
   color: colorTypes;
   title: string;
   description: string;

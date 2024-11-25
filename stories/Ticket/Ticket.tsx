@@ -1,28 +1,16 @@
-import Blocks from "@/stories/Blocks/Blocks";
-import Language from "../../gcui-main/locales/Language";
-import Badge from "@/stories/Badge/Badge";
-import ColorTypes from "../../gcui-main/functions/ColorTypes";
-import TicketStatus from "@/stories/TicketStatues/TicketStatus";
+import Blocks from "../../stories/Blocks/Blocks";
+import Language from "@/gcui-main/locales/Language";
+import Badge from "../../stories/Badge/Badge";
+import ColorTypes from "@/gcui-main/functions/ColorTypes";
+import TicketStatus from "../TicketStatues/TicketStatus";
 
-interface TicketProps {
-  ticket: {
-    id: string;
-    title: string;
-    priority: "low" | "medium" | "high" | "urgent";
-    messages_count: number;
-    business: {
-      name: string;
-    };
-    _status: number;
-    created_at: string;
-  };
-}
-
-const Ticket = ({ ticket }: TicketProps) => {
+const Ticket = ({ ticket }) => {
   return (
     <Blocks.Dark>
       <div className={"flex items-center justify-between text-xs"}>
-        <div className={"text-slate-600"}>{ticket.business.name}</div>
+        <div className={"text-slate-600"}>
+          {ticket.business && ticket.business.name}
+        </div>
         <div>
           <Badge color={ColorTypes.default}>
             <a

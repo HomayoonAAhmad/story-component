@@ -3,13 +3,12 @@ import { useSyncExternalStore } from "react";
 import { MenuStores } from "@/gcui-main/stores/menuStore";
 import Language from "@/gcui-main/locales/Language";
 import { useEffect, useState } from "react";
-import { AuthStores } from "@/gcui-main/stores/AuthStore";
+import { AuthStores } from "./stores/AuthStore";
 
 const SideMenu = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(
     AuthStores.getSnapshot()
   );
-
   const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
