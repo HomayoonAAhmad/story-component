@@ -1,7 +1,7 @@
 import React from "react";
 import AvatarSelector from "./AvatarSelector";
 import Language from "./locales/Language";
-type AvatarBoxProps = {
+export type AvatarBoxProps = {
   name: string;
   formAvatar: string;
   type: "horizontal" | "vertical" | "square" | "custom";

@@ -3,6 +3,9 @@ import type { StorybookConfig } from "@storybook/nextjs";
 const config: StorybookConfig = {
   stories: [
     "../stories/**/*.mdx",
+    "../gcui-main/**/*.mdx",
+    "../gcui-main/cards/**/*.mdx",
+    "../gcui-main/forms/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
 
@@ -21,7 +24,8 @@ const config: StorybookConfig = {
   docs: {},
 
   typescript: {
-    reactDocgen: "react-docgen-typescript"
-  }
+    reactDocgen: "react-docgen-typescript",
+  },
+  staticDirs: ["../public"],
 };
 export default config;

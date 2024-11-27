@@ -2,19 +2,37 @@ import Blocks from "../../stories/Blocks/Blocks";
 import React, { useEffect } from "react";
 import Language from "../locales/Language";
 import Button from "@/stories/Button/Button";
-import { getInvoice } from "../models/InvoiceModel";
+// import { getInvoice } from "../models/InvoiceModel"; // Commented out the API import
 import Loader from "../Loader";
 
 const Invoice = ({ invoice }) => {
-  const [dbInvoice, setDbInvoice] = React.useState({});
-  const [loading, setLoading] = React.useState(true);
+  const [dbInvoice, setDbInvoice] = React.useState({
+    items: [
+      // Mock data for development or Storybook
+      {
+        payable: {
+          short_description: "Sample Item 1",
+          price: 500,
+        },
+      },
+      {
+        payable: {
+          short_description: "Sample Item 2",
+          price: 1000,
+        },
+      },
+    ],
+  });
+  const [loading, setLoading] = React.useState(false); // Assume not loading for development
   const expired = new Date(invoice.expired_at);
   console.log("expired", expired);
+
   let status = "pending";
   let days_remained = Math.floor(
     (expired - new Date()) / (1000 * 60 * 60 * 24)
   );
   console.log("days_remained", days_remained);
+
   if (days_remained < 30) {
     status = "warning";
   }
@@ -24,30 +42,32 @@ const Invoice = ({ invoice }) => {
   if (days_remained < 0) {
     status = "expired";
   }
-  const get = async () => {
-    setLoading(true);
-    let apiInvoice = null;
-    apiInvoice = await getInvoice(invoice.invoice_number);
-    if (apiInvoice !== null) {
-      setDbInvoice(apiInvoice);
-    } else {
-      //show 404
-    }
-    setLoading(false);
-  };
+
+  // const get = async () => {
+  //   setLoading(true);
+  //   let apiInvoice = null;
+  //   apiInvoice = await getInvoice(invoice.invoice_number);
+  //   if (apiInvoice !== null) {
+  //     setDbInvoice(apiInvoice);
+  //   } else {
+  //     //show 404
+  //   }
+  //   setLoading(false);
+  // };
+
   useEffect(() => {
-    get();
+    // get(); // Commented out the API call
   }, []);
 
   return (
     <Blocks.Dark>
       <div className="">
-        <div className={"flex justify-between items-center  mb-4"}>
+        <div className={"flex justify-between items-center mb-4"}>
           <div>
             <span className={"text-sm pe-2"}>{Language().invoce_number}:</span>
             <a
               className={"text-teal-600"}
-              href={`/management/invoice/${invoice.invoce_number}`}
+              href={`/management/invoice/${invoice.invoice_number}`}
             >
               {invoice.invoice_number}
             </a>
@@ -77,7 +97,7 @@ const Invoice = ({ invoice }) => {
                 <div key={index} className={"flex gap-2 items-center"}>
                   <span className={"fa fa-check text-orange-400"}></span>
                   <div className={"text-slate-500"}>
-                    <span>{item.payable.short_description}</span>-
+                    <span>{item.payable.short_description}</span> -
                     <span className={"px-2"}>{item.payable.price}</span>
                     <span>{Language().price_unit}</span>
                   </div>

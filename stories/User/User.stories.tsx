@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import User from "@/stories/User/User";
 
 const myUser = {
-  avatar: "/assets/images/example-avatar.png",
+  avatar: "/assets/images/gcast.jpg",
   name: "همایون",
   username: "homayoon123",
 };
@@ -29,7 +29,7 @@ export const Default: Story = {
 export const Loading: Story = {
   args: {
     loading: true,
-    user: myUser,
+    user: null,
   },
 };
 
