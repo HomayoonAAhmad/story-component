@@ -1,5 +1,5 @@
-import { H3, Paragraph } from "../../stories/Typo/Typo";
-import colorTypes from "../functions/ColorTypes";
+import { H3, Paragraph } from "@/stories/Typo/Typo";
+import colorTypes from "@/gcui-main/functions/ColorTypes";
 export interface SupportProps {
   color: colorTypes;
   title: string;

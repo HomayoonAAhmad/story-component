@@ -27,7 +27,7 @@ const preview: Preview = {
       theme: customTheme, // Apply custom theme to DocsPage
     },
   },
-  tags: ["autodocs", "autodocs", "autodocs", "autodocs", "autodocs"],
+  tags: ["autodocs", "autodocs", "autodocs", "autodocs", "autodocs", "autodocs"],
 };
 
 if (typeof document !== "undefined") {

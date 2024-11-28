@@ -1,58 +1,77 @@
 import React from "react";
 import Business from "@/gcui-main/cards/Business";
+import Blocks from "@/stories/Blocks/Blocks";
 
+// Mock data
+const sampleBusiness = {
+  id: 1,
+  name: "Tech Innovators Ltd.",
+  website: "https://techinnovators.com",
+  avatar: "/assets/images/company-logo.png",
+  _status: 1, // Change this value to see different statuses
+};
+
+const business = (args) => (
+  <div className="grid">
+    <Business {...args} />
+  </div>
+);
 export default {
   title: "Cards/Business",
   component: Business,
+  parameters: {
+    layout: "padded",
+  },
+  args: {
+    business: sampleBusiness,
+    editable: false,
+  },
   argTypes: {
-    editable: { control: "boolean" },
     business: {
       control: "object",
-      defaultValue: {
-        id: "123",
-        name: "نوآوران فناوری",
-
-        website: "https://techinnovators.com",
-        _status: 3, // Under review
-      },
+      description: "Business object containing details to display.",
+    },
+    editable: {
+      control: "boolean",
+      description: "Enables editing options for the business.",
     },
   },
 };
 
-const Template = (args) => <Business {...args} />;
+// Stories
 
-export const Default = Template.bind({});
-Default.args = {
+export const Inactive = business.bind({});
+Inactive.args = {
   business: {
-    id: "123",
-    name: "نوآوران فناوری",
-
-    website: "https://techinnovators.com",
-    _status: 3, // Under review
-  },
-  editable: true,
-};
-
-export const NotEditable = Template.bind({});
-NotEditable.args = {
-  business: {
-    id: "124",
-    name: "فناوری‌های آینده",
-
-    website: "https://futuretech.com",
-    _status: 2, // Cog spinning
+    ...sampleBusiness,
+    _status: 0, // Inactive
   },
   editable: false,
 };
 
-export const UnderReview = Template.bind({});
+export const Active = business.bind({});
+Active.args = {
+  business: {
+    ...sampleBusiness,
+    _status: 1, // Active
+  },
+  editable: true,
+};
+
+export const Processing = business.bind({});
+Processing.args = {
+  business: {
+    ...sampleBusiness,
+    _status: 2, // Processing
+  },
+  editable: false,
+};
+
+export const UnderReview = business.bind({});
 UnderReview.args = {
   business: {
-    id: "125",
-    name: "آزمایشگاه‌های خلاق",
-
-    website: "https://creativelabs.com",
-    _status: 3, // Under review
+    ...sampleBusiness,
+    _status: 3, // Under Review
   },
   editable: true,
 };

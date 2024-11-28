@@ -1,8 +1,8 @@
-import Image from "../Image";
+import Image from "@/gcui-main/Image";
 import Button from "@/stories/Button/Button";
-import Language from "../locales/Language";
+import Language from "@/gcui-main/locales/Language";
 import Blocks from "@/stories/Blocks/Blocks";
-import ColorTypes from "../functions/ColorTypes";
+import ColorTypes from "@/gcui-main/functions/ColorTypes";
 
 const Business = ({ business, editable = false }) => {
   return (
@@ -13,6 +13,9 @@ const Business = ({ business, editable = false }) => {
         }
       ></div>
       <div className={"absolute top-3 left-3 "}>
+        {business._status == 0 && (
+          <span className={"text-red-500 ps-2 far fa-times"}></span>
+        )}
         {business._status == 1 && (
           <span className={"text-teal-500 ps-2 far fa-check"}></span>
         )}
