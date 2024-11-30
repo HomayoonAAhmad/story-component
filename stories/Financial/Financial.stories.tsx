@@ -1,9 +1,11 @@
 import { Meta, StoryObj } from "@storybook/react";
-import FinancialCard, { FinancialCardProps } from "./Financial";
+import FinancialCard, {
+  FinancialCardProps,
+} from "../../gcui-main/cards/Financial";
 import { title } from "process";
 
 const meta: Meta<typeof FinancialCard> = {
-  title: "Components/FinancialCard",
+  title: "Cards/FinancialCard",
   component: FinancialCard,
   tags: ["autodocs"],
   argTypes: {

@@ -1,16 +1,16 @@
 "use client";
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { BasketStores } from "./stores/BasketStore";
-import Modal from "../stories/Modal/Modal";
-import { Get, Remove } from "./functions/Basket";
-import { H1, Paragraph } from "../stories/Typo/Typo";
-import { getPayable } from "./models/PayableModel";
+import { BasketStores } from "@/gcui-main/stores/BasketStore";
+import Modal from "@/stories/Modal/Modal";
+import { Get, Remove } from "@/gcui-main/functions/Basket";
+import { Paragraph } from "@/stories/Typo/Typo";
+import { getPayable } from "@/gcui-main/models/PayableModel";
 import Language from "./locales/Language";
-import ColorTypes from "./functions/ColorTypes";
+import ColorTypes from "@/gcui-main/functions/ColorTypes";
 import Button from "@/stories/Button/Button";
-import Login from "./forms/Login";
-import { AuthStores } from "./stores/AuthStore";
-import Loader from "./Loader";
+import Login from "@/gcui-main/forms/Login";
+import { AuthStores } from "@/gcui-main/stores/AuthStore";
+import Loader from "@/gcui-main/Loader";
 
 const Basket = () => {
   const open = useSyncExternalStore(
@@ -23,6 +23,7 @@ const Basket = () => {
     AuthStores.getSnapshot,
     AuthStores.getServerSnapshot
   );
+  const [loadingContinue, setLoadingContinue] = useState(false);
   const [storageBasketItems, setStorageBasketItems] = useState([]);
   useEffect(() => {
     const basketItems = Get();
@@ -46,11 +47,12 @@ const Basket = () => {
         return;
       }
       setLoading(true);
-      getPayable(item).then((res) => {
+      getPayable(parseInt(item)).then((res) => {
         setPayable(res);
         setLoading(false);
       });
     }, [item]);
+
     return (
       <div>
         {payable && !loading && (
@@ -85,7 +87,7 @@ const Basket = () => {
                 icon={<span className={"far fa-trash-alt"} />}
                 onClick={() => {
                   //remove from basket
-                  Remove(payable.slug);
+                  Remove(payable.id);
                   const basketItems = Get();
                   setStorageBasketItems(basketItems);
                 }}
@@ -115,17 +117,20 @@ const Basket = () => {
             storageBasketItems.map((item, index) => {
               return <PayableItem key={index} item={item} />;
             })}
-
           {storageBasketItems.length === 0 ? (
             <div className={"text-center"}>{Language().emptyBasket}</div>
           ) : (
             ""
           )}
         </div>
-        {!auth && <Login />}
+        {!auth && <Login login-for-shopping={true} />}
         {auth && (
           <div>
             <Button
+              onClick={() => {
+                setLoadingContinue(true);
+              }}
+              loading={loadingContinue ? 1 : 0}
               color={ColorTypes.primary}
               tag={"a"}
               href={"/management/pay"}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import Service from "@/gcui-main/Service";
+import Service from "@/gcui-main/cards/Service";
 import content from "@/gcui-main/types/Content";
 
 const exampleService: content = {
@@ -12,7 +12,7 @@ const exampleService: content = {
 };
 
 const meta: Meta<typeof Service> = {
-  title: "Components/Service",
+  title: "Cards/Service",
   component: Service,
   args: {
     service: exampleService,

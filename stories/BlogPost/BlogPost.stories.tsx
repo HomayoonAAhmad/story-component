@@ -29,7 +29,7 @@ const sampleBlog = {
   created_at: new Date().toISOString(),
   user: {
     name: "John Doe",
-    avatar: "path/to/avatar.jpg",
+    avatar: null,
   },
   meta: JSON.stringify({
     menu: [{ name: "instagram", link: "https://instagram.com" }],

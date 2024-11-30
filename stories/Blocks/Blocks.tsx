@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface blockProps {
+interface blockProps {
   particular?: boolean;
   children?: React.ReactNode | string;
   className?: string;

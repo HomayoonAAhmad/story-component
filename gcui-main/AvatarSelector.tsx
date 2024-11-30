@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import ReactCrop from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
-import Modal from "../stories/Modal/Modal";
+import Modal from "@/stories/Modal/Modal";
 import Button from "@/stories/Button/Button";
-import Language from "./locales/Language";
-import ColorTypes from "./functions/ColorTypes";
+import Language from "@/gcui-main/locales/Language";
+import ColorTypes from "@/gcui-main/functions/ColorTypes";
 
 const AvatarSelector = (props) => {
   //modal handlers :

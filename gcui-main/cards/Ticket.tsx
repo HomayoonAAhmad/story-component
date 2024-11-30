@@ -2,7 +2,7 @@ import Blocks from "../../stories/Blocks/Blocks";
 import Language from "@/gcui-main/locales/Language";
 import Badge from "../../stories/Badge/Badge";
 import ColorTypes from "@/gcui-main/functions/ColorTypes";
-import TicketStatus from "../TicketStatues/TicketStatus";
+import TicketStatus from "../../stories/TicketStatues/TicketStatus";
 
 const Ticket = ({ ticket }) => {
   return (

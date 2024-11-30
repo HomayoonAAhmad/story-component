@@ -1,9 +1,10 @@
-import Blocks from "../stories/Blocks/Blocks";
-import { H2, Paragraph } from "../stories/Typo/Typo";
-import Button from "../stories/Button/Button";
-import ColorTypes from "./functions/ColorTypes";
-import content from "./types/Content";
+import Blocks from "@/stories/Blocks/Blocks";
+import { H2, Paragraph } from "@/stories/Typo/Typo";
+import Button from "@/stories/Button/Button";
+import ColorTypes from "../functions/ColorTypes";
+import content from "@/gcui-main/types/Content";
 import { bool } from "prop-types";
+import Language from "../locales/Language";
 
 export default function Service({ service }: { service: content }) {
   if (!service) {
@@ -29,7 +30,7 @@ export default function Service({ service }: { service: content }) {
             href={"/services/" + "/" + service.slug}
             tag={"a"}
           >
-            مشاهده و خرید
+            {Language().view_and_buy}
           </Button>
         </div>
       </div>

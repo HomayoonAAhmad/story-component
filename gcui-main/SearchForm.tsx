@@ -1,9 +1,9 @@
 "use client";
 import Modal from "@/stories/Modal/Modal";
 import { useState } from "react";
-import Button from "../stories/Button/Button";
-import ColorTypes from "@/gcui-main/functions/ColorTypes";
-import Search from "@/gcui-main/forms/Search";
+import Button from "@/stories/Button/Button";
+import ColorTypes from "./functions/ColorTypes";
+import Search from "./forms/Search";
 
 export default function SearchForm() {
   const [open, setOpen] = useState(false);

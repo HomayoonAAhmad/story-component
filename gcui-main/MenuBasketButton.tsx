@@ -6,12 +6,20 @@ import { BasketStores } from "./stores/BasketStore";
 import { useEffect, useState } from "react";
 import Button from "@/stories/Button/Button";
 
-const MenuBasketButton = () => {
-  const [totalBasket, setTotalBasket] = useState(0);
+export type MenuBasketButtonProps = {
+  totalBasket?: number; // Allow passing a custom total value
+};
+
+const MenuBasketButton = ({
+  totalBasket: initialTotal,
+}: MenuBasketButtonProps) => {
+  const [totalBasket, setTotalBasket] = useState(initialTotal ?? 0);
   useEffect(() => {
-    let total = Get();
-    setTotalBasket(total ? total.length : 0);
-  }, []);
+    if (initialTotal === undefined) {
+      let total = Get();
+      setTotalBasket(total ? total.length : 0);
+    }
+  }, [initialTotal]);
   return (
     <div className={"relative"}>
       <Button

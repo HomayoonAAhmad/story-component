@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Delay } from "../../gcui-main/functions/Delay";
+import { Delay } from "@/gcui-main/functions/Delay";
 
 interface modalProps {
   open: boolean;

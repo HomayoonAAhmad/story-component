@@ -1,7 +1,6 @@
 import MenuItem from "./MenuItem";
-import Button from "../stories/Button/Button";
+import Button from "@/stories/Button/Button";
 import SearchForm from "./SearchForm";
-import Badge from "@/stories/Badge/Badge";
 import Device from "./functions/Device";
 import ColorTypes from "./functions/ColorTypes";
 import Image from "./Image";
@@ -11,7 +10,7 @@ import ActionBarDesktop from "./ActionBarDesktop";
 //just in development :
 export const fetchCache = "force-no-store";
 
-export type authBlockProps = {
+type authBlockProps = {
   [Language: string]: any;
 };
 
