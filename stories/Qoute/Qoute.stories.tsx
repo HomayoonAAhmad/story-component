@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryFn } from "@storybook/react";
-import Quote from "@/gcui-main/cards/Quote";
+import Quote from "@/stories/Qoute/Quote";
 
 // Mock data for the story
 const mockData = {

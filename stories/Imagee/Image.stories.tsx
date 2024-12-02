@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryFn } from "@storybook/react";
-import Image, { ImageProps } from "@/gcui-main/Image";
+import Image, { ImageProps } from "./Image";
 
 export default {
   title: "Components/Image",
@@ -27,8 +27,11 @@ export default {
   },
 } as Meta;
 
-const Template: StoryFn<ImageProps> = (args) => <Image {...args} />;
-
+const Template: StoryFn<ImageProps> = (args) => (
+  <div className="w-60 h-60">
+    <Image {...args} />
+  </div>
+);
 export const Cover = Template.bind({});
 Cover.args = {
   src: "/assets/images/gpro.jpg",

@@ -1,10 +1,10 @@
 import Button from "../../stories/Button/Button";
-import colorTypes from "../functions/ColorTypes";
+import colorTypes from "@/gcui-main/functions/ColorTypes";
 import { H2, H3, Paragraph } from "../../stories/Typo/Typo";
 import Blocks from "../../stories/Blocks/Blocks";
-import Image from "../Image";
-import ContentType from "../types/Content";
-import Language from "../locales/Language";
+import Image from "@/stories/Imagee/Image";
+import ContentType from "@/gcui-main/types/Content";
+import Language from "@/gcui-main/locales/Language";
 
 export default function BlogPost({
   blog,

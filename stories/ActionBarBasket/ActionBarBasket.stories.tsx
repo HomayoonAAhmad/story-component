@@ -1,5 +1,5 @@
 import React from "react";
-import ActionBarBasket from "@/gcui-main/ActionBarBasket";
+import ActionBarBasket from "./ActionBarBasket";
 import { BasketStores } from "@/gcui-main/stores/BasketStore";
 
 // Simulate the `BasketStores` state for Storybook

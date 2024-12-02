@@ -1,5 +1,5 @@
 import React from "react";
-import SideMenu from "@/gcui-main/SideMenu";
+import SideMenu from "./SideMenu";
 import { MenuStores } from "@/gcui-main/stores/menuStore";
 import { AuthStores } from "@/gcui-main/stores/AuthStore";
 

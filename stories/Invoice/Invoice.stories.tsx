@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryFn } from "@storybook/react";
-import Invoice from "@/gcui-main/cards/Invoice";
+import Invoice from "./Invoice";
 
 interface InvoiceProps {
   invoice: {

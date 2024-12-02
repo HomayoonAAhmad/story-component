@@ -2,7 +2,7 @@
 import { Get } from "@/gcui-main/functions/Basket";
 import Badge from "@/stories/Badge/Badge";
 import ColorTypes from "@/gcui-main/functions/ColorTypes";
-import Language from "./locales/Language";
+import Language from "@/gcui-main/locales/Language";
 import { BasketStores } from "@/gcui-main/stores/BasketStore";
 import { useEffect, useState } from "react";
 

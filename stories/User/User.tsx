@@ -1,9 +1,9 @@
 "use client";
-import Image from "../Image";
-import Language from "../locales/Language";
+import Image from "../../stories/Imagee/Image";
+import Language from "@/gcui-main/locales/Language";
 import React from "react";
-import Loader from "../Loader";
-import { getProfile } from "../models/AuthModel";
+import Loader from "../../stories/Loader/Loader";
+import { getProfile } from "@/gcui-main/models/AuthModel";
 
 interface UserProfile {
   avatar?: string;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryFn } from "@storybook/react";
-import Slogan, { SloganProps } from "@/gcui-main/cards/Slogan";
+import Slogan, { SloganProps } from "./Slogan";
 
 const meta: Meta<typeof Slogan> = {
   title: "Cards/Slogan",

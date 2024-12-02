@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "@/gcui-main/Footer";
+import Footer from "./Footer";
 
 export default {
   title: "Components/Footer",

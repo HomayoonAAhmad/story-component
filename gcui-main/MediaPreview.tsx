@@ -1,6 +1,6 @@
 "use client";
 import { GetFileType } from "./functions/File";
-import Image from "./Image";
+import Image from "../stories/Imagee/Image";
 import { useState } from "react";
 
 const MediaPreview = ({ content }) => {

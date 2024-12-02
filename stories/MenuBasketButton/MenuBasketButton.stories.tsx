@@ -1,9 +1,7 @@
 // MenuBasketButton.stories.tsx
 import React from "react";
 import { Meta, StoryFn } from "@storybook/react";
-import MenuBasketButton, {
-  MenuBasketButtonProps,
-} from "@/gcui-main/MenuBasketButton";
+import MenuBasketButton, { MenuBasketButtonProps } from "./MenuBasketButton";
 
 export default {
   title: "Components/MenuBasketButton",

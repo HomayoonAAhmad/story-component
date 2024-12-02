@@ -1,7 +1,7 @@
 // ImageSlider.stories.tsx
 import React from "react";
 import { Meta, StoryFn } from "@storybook/react";
-import ImageSlider, { ImageSliderProps } from "@/gcui-main/ImageSlider";
+import ImageSlider, { ImageSliderProps } from "./ImageSlider";
 
 export default {
   title: "Components/ImageSlider",

@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryFn } from "@storybook/react";
-import Ticket from "../../gcui-main/cards/Ticket";
+import Ticket from "./Ticket";
 
 interface TicketProps {
   ticket: {

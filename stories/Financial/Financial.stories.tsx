@@ -1,7 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import FinancialCard, {
-  FinancialCardProps,
-} from "../../gcui-main/cards/Financial";
+import FinancialCard, { FinancialCardProps } from "./Financial";
 import { title } from "process";
 
 const meta: Meta<typeof FinancialCard> = {

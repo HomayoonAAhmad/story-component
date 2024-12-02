@@ -1,5 +1,5 @@
 import React from "react";
-import Share from "@/gcui-main/Share";
+import Share from "./Share";
 
 export default {
   title: "Components/Share", // Organize stories in Storybook

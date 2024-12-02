@@ -1,5 +1,5 @@
 import React from "react";
-import Project from "@/gcui-main/cards/Project";
+import Project from "./Project";
 import { Meta, StoryFn } from "@storybook/react";
 
 interface Content {

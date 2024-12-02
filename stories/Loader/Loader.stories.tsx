@@ -1,4 +1,4 @@
-import Loader from "@/gcui-main/Loader";
+import Loader from "./Loader";
 import { Meta, StoryFn } from "@storybook/react";
 
 export default {

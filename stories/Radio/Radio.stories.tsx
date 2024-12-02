@@ -1,4 +1,4 @@
-import Radio from "@/gcui-main/Radio";
+import Radio from "./Radio";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Radio> = {

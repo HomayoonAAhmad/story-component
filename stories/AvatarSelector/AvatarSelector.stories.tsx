@@ -1,6 +1,6 @@
 // AvatarSelector.stories.jsx
 import React from "react";
-import AvatarSelector from "@/gcui-main/AvatarSelector";
+import AvatarSelector from "@/stories/AvatarSelector/AvatarSelector";
 
 export default {
   title: "Components/AvatarSelector",

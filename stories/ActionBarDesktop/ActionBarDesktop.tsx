@@ -1,11 +1,11 @@
 "use client";
 import { useSyncExternalStore } from "react";
-import { AuthStores } from "../gcui-main/stores/AuthStore";
-import MenuBasketButton from "./MenuBasketButton";
-import Button from "@/stories/Button/Button";
-import ColorTypes from "./functions/ColorTypes";
+import { AuthStores } from "@/gcui-main/stores/AuthStore";
+import MenuBasketButton from "../MenuBasketButton/MenuBasketButton";
+import Button from "../Button/Button";
+import ColorTypes from "@/gcui-main/functions/ColorTypes";
 import Badge from "@/stories/Badge/Badge";
-import Language from "./locales/Language";
+import Language from "@/gcui-main/locales/Language";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 

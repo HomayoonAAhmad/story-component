@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import Service from "@/gcui-main/cards/Service";
+import Service from "./Service";
 import content from "@/gcui-main/types/Content";
 
 const exampleService: content = {

@@ -1,5 +1,5 @@
 import React from "react";
-import Business from "@/gcui-main/cards/Business";
+import Business from "@/stories/Business/Business";
 import Blocks from "@/stories/Blocks/Blocks";
 
 // Mock data

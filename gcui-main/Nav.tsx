@@ -1,9 +1,9 @@
 import MenuItem from "./MenuItem";
 import Button from "@/stories/Button/Button";
-import SearchForm from "./SearchForm";
+import SearchForm from "../stories/SearchFrom/SearchForm";
 import Device from "./functions/Device";
 import ColorTypes from "./functions/ColorTypes";
-import Image from "./Image";
+import Image from "../stories/Imagee/Image";
 import NavbarBars from "./NavbarBars";
 import ActionBarDesktop from "./ActionBarDesktop";
 

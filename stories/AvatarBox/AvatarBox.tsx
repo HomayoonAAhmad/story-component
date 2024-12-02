@@ -1,6 +1,6 @@
 import React from "react";
-import AvatarSelector from "./AvatarSelector";
-import Language from "./locales/Language";
+import AvatarSelector from "../AvatarSelector/AvatarSelector";
+import Language from "@/gcui-main/locales/Language";
 export type AvatarBoxProps = {
   name: string;
   formAvatar: string;

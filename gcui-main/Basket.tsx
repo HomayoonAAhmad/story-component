@@ -10,7 +10,7 @@ import ColorTypes from "@/gcui-main/functions/ColorTypes";
 import Button from "@/stories/Button/Button";
 import Login from "@/gcui-main/forms/Login";
 import { AuthStores } from "@/gcui-main/stores/AuthStore";
-import Loader from "@/gcui-main/Loader";
+import Loader from "@/stories/Loader/Loader";
 
 const Basket = () => {
   const open = useSyncExternalStore(

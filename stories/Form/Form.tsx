@@ -3,7 +3,7 @@ import Button from "@/stories/Button/Button";
 import Language from "../../gcui-main/locales/Language";
 import Input from "../Input/Input";
 import Blocks from "@/stories/Blocks/Blocks";
-import Loader from "../../gcui-main/Loader";
+import Loader from "../Loader/Loader";
 
 export type FormProps = {
   children: any;

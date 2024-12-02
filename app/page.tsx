@@ -1,18 +1,18 @@
 import ActionBarBasket from "@/gcui-main/ActionBarBasket";
 import AvatarBox from "@/gcui-main/AvatarBox";
-import AvatarSelector from "@/gcui-main/AvatarSelector";
+import AvatarSelector from "@/stories/AvatarSelector/AvatarSelector";
 import Basket from "@/gcui-main/Basket";
 import BlogPost from "@/gcui-main/cards/BlogPost";
-import Quote from "@/gcui-main/cards/Quote";
+import Quote from "@/stories/Qoute/Quote";
 import Confirm from "@/gcui-main/Confirm";
-import Image from "@/gcui-main/Image";
-import ImageSlider from "@/gcui-main/ImageSlider";
-import Loader from "@/gcui-main/Loader";
+import Image from "@/stories/Imagee/Image";
+import ImageSlider from "@/stories/ImageSlider/ImageSlider";
+import Loader from "@/stories/Loader/Loader";
 import MenuItem from "@/gcui-main/MenuItem";
 import Nav from "@/gcui-main/Nav";
 import Plans from "@/gcui-main/Plans";
-import SearchForm from "@/gcui-main/SearchForm";
-import Share from "@/gcui-main/Share";
+import SearchForm from "@/stories/SearchFrom/SearchForm";
+import Share from "@/stories/Sharee/Share";
 import SideMenu from "@/gcui-main/SideMenu";
 
 {

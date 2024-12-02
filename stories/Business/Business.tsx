@@ -1,4 +1,4 @@
-import Image from "@/gcui-main/Image";
+import Image from "@/stories/Imagee/Image";
 import Button from "@/stories/Button/Button";
 import Language from "@/gcui-main/locales/Language";
 import Blocks from "@/stories/Blocks/Blocks";

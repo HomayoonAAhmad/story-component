@@ -1,10 +1,10 @@
 import Blocks from "@/stories/Blocks/Blocks";
 import { H2, Paragraph } from "@/stories/Typo/Typo";
 import Button from "@/stories/Button/Button";
-import ColorTypes from "../functions/ColorTypes";
+import ColorTypes from "@/gcui-main/functions/ColorTypes";
 import content from "@/gcui-main/types/Content";
 import { bool } from "prop-types";
-import Language from "../locales/Language";
+import Language from "@/gcui-main/locales/Language";
 
 export default function Service({ service }: { service: content }) {
   if (!service) {

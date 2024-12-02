@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AvatarBox from "@/gcui-main/AvatarBox";
+import AvatarBox from "./AvatarBox";
 
 export default {
   title: "Components/AvatarBox",

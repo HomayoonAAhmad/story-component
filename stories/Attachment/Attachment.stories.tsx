@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Attachment from "@/gcui-main/Attachment";
+import Attachment from "@/stories/Attachment/Attachment";
 import ColorTypes from "@/gcui-main/functions/ColorTypes";
 import Blocks from "../Blocks/Blocks";
 
@@ -18,11 +18,7 @@ const attachment = (args) => {
     <Attachment
       {...args}
       setFilesInForm={(uploadedFiles) => setFiles(uploadedFiles)}
-    >
-      <Blocks.Bordered particular={"particular"} className="mb-5">
-        Drag and drop files here or click the clip icon below to upload
-      </Blocks.Bordered>
-    </Attachment>
+    ></Attachment>
   );
 };
 

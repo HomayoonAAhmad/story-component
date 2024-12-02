@@ -1,6 +1,6 @@
-import { H3, Paragraph } from "../../stories/Typo/Typo";
-import Image from "../Image";
-import Content from "../types/Content";
+import { H3, Paragraph } from "../Typo/Typo";
+import Image from "../Imagee/Image";
+import Content from "../../gcui-main/types/Content";
 
 const Quote = ({ data }: Readonly<Content>) => {
   if (!data) {

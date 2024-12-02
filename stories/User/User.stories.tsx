@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import User from "@/gcui-main/cards/User";
+import User from "./User";
 
 const myUser = {
   avatar: "/assets/images/gcast.jpg",

@@ -1,6 +1,6 @@
 import Blocks from "../../stories/Blocks/Blocks";
 import { H3, Paragraph } from "../../stories/Typo/Typo";
-import Image from "../Image";
+import Image from "../../stories/Imagee/Image";
 import Content from "../types/Content";
 
 export default function Project({ data }: { data: Content }) {

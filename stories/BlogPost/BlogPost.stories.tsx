@@ -1,5 +1,5 @@
 import { Meta, StoryFn } from "@storybook/react";
-import BlogPost from "@/gcui-main/cards/BlogPost";
+import BlogPost from "./BlogPost";
 import ContentType from "@/gcui-main/types/Content";
 
 export default {

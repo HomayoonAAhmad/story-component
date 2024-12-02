@@ -1,5 +1,5 @@
-import Image from "./Image";
-import Language from "./locales/Language";
+import Image from "../Imagee/Image";
+import Language from "@/gcui-main/locales/Language";
 import Blocks from "@/stories/Blocks/Blocks";
 
 const Footer = ({ settings, menu, namads }) => {

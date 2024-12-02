@@ -1,5 +1,5 @@
 import React from "react";
-import ActionBarDesktop from "@/gcui-main/ActionBarDesktop";
+import ActionBarDesktop from "./ActionBarDesktop";
 
 export default {
   title: "Components/ActionBarDesktop",

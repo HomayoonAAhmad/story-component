@@ -1,6 +1,6 @@
-import Blocks from "../../stories/Blocks/Blocks";
-import { H2, Paragraph } from "../../stories/Typo/Typo";
-import Image from "../Image";
+import Blocks from "../Blocks/Blocks";
+import { H2, Paragraph } from "../Typo/Typo";
+import Image from "../Imagee/Image";
 export interface SloganProps {
   media: string;
   title: string;
