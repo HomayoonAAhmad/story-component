@@ -1,29 +1,30 @@
 "use client";
-
 import { usePathname } from "next/navigation";
-import Badge from "@/stories/Badge/Badge";
+import Badge from "../Badge/Badge";
 import ColorTypes from "@/gcui-main/functions/ColorTypes";
 import Language from "@/gcui-main/locales/Language";
 import ActionBarBasket from "../ActionBarBasket/ActionBarBasket";
-import { useEffect, useState, useRef /*useSyncExternalStore*/ } from "react";
-// import { AuthStores } from "./stores/AuthStore";
-import Blocks from "@/stories/Blocks/Blocks";
+import { useEffect, useState, useRef, useSyncExternalStore } from "react";
+import { AuthStores } from "@/gcui-main/stores/AuthStore";
+import Blocks from "../Blocks/Blocks";
+import NotificationBox from "@/gcui-main/NotificationBox";
+import colorTypes from "@/gcui-main/functions/ColorTypes";
 
 const ActionBar = () => {
   const language = Language("common");
   const currentPath = usePathname();
-  //const [authStatus, setAuthStatus] = useState(false);
+  // const [authStatus, setAuthStatus] = useState(false);
   const [isNotifOpen, setIsNotifOpen] = useState(false);
   const notifRef = useRef<HTMLDivElement>(null);
 
   // const auth = useSyncExternalStore(
-  //   AuthStores.subscribe,
-  //   AuthStores.getSnapshot,
-  //   AuthStores.getServerSnapshot
+  // 	AuthStores.subscribe,
+  // 	AuthStores.getSnapshot,
+  // 	AuthStores.getServerSnapshot
   // );
 
   // useEffect(() => {
-  //   setAuthStatus(auth);
+  // 	setAuthStatus(auth);
   // }, [auth]);
 
   const handleToggleNotif = () => {
@@ -79,7 +80,7 @@ const ActionBar = () => {
         {items.map((item, index) => (
           <li
             key={index}
-            className="w-1/5 border-l border-slate-300 border-opacity-10 relative"
+            className={`w-1/5  relative`}
             ref={item.icon === "fa fa-bell" ? notifRef : undefined} // Assign ref to the notification icon
           >
             <a
@@ -107,7 +108,7 @@ const ActionBar = () => {
             </a>
             {item.hasBadge && (
               <div className="absolute -top-2 left-1/2">
-                <Badge color={ColorTypes.danger}>{item.badgeCount}</Badge>
+                <Badge color={colorTypes.primary}>{item.badgeCount}</Badge>
               </div>
             )}
             {/* Notification submenu */}
@@ -117,26 +118,19 @@ const ActionBar = () => {
                   isNotifOpen ? "scale-100 opacity-100" : "scale-90 opacity-0"
                 }`}
               >
-                <div className="bg-slate-800 rounded-2xl p-4">
-                  <div className="p-4 border-b">
-                    <p className="font-semibold text-slate-800">
-                      Notifications
-                    </p>
-                  </div>
-                </div>
+                <NotificationBox />
               </div>
             )}
           </li>
         ))}
-        <li className="w-1/5 border-l border-slate-300 border-opacity-10 relative">
+        <li className="w-1/5  relative">
           <ActionBarBasket />
         </li>
       </ul>
     </div>
   );
-  // } else {
-  //   return <></>;
-  // }
-};
+}; //else {
+//return <></>;
+//}
 
 export default ActionBar;

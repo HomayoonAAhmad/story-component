@@ -1,11 +1,12 @@
-import MenuItem from "./MenuItem";
-import Button from "@/stories/Button/Button";
-import SearchForm from "../stories/SearchFrom/SearchForm";
-import Device from "./functions/Device";
-import ColorTypes from "./functions/ColorTypes";
-import Image from "../stories/Imagee/Image";
-import NavbarBars from "./NavbarBars";
-import ActionBarDesktop from "./ActionBarDesktop";
+import MenuItem from "@/stories/MenuItem/MenuItem";
+import Button from "../Button/Button";
+import SearchForm from "../SearchFrom/SearchForm";
+import ColorTypes from "@/gcui-main/functions/ColorTypes";
+import Image from "../Imagee/Image";
+import NavbarBars from "@/gcui-main/NavbarBars";
+import ActionBarDesktop from "../ActionBarDesktop/ActionBarDesktop";
+import Device from "@/gcui-main/functions/Device";
+import Link from "next/link";
 
 //just in development :
 export const fetchCache = "force-no-store";
@@ -15,8 +16,7 @@ type authBlockProps = {
 };
 
 const AuthBlock = async () => {
-  "use client";
-  const isMobile = Device();
+  let isMobile = await Device();
   if (isMobile) {
     return (
       <div className={"flex gap-2"}>
@@ -33,16 +33,16 @@ const AuthBlock = async () => {
   }
   return <ActionBarDesktop />;
 };
-const Nav = ({ Language, menu }) => {
-  const isMobile = Device();
+const Nav = async ({ Language, menu }) => {
+  let isMobile = await Device();
   let menuItems = [];
   let activeId = 1;
-  try {
-    let data = JSON.parse(menu.meta);
-    menuItems = data.menu;
-  } catch (e) {
-    console.log(e);
-  }
+  // try {
+  //   let data = JSON.parse(menu.meta);
+  //   menuItems = data.menu;
+  // } catch (e) {
+  //   console.log(e);
+  // }
   if (isMobile) {
     return (
       <div className={"container mx-auto  z-20 sticky top-0"}>
@@ -87,14 +87,14 @@ const Nav = ({ Language, menu }) => {
     <div className={"container mx-auto  z-20 sticky top-0"}>
       <nav className={"flex gap-3 "}>
         <h1 className={"overflow-hidden h-20 w-20"}>
-          <a href={"/"} className={"relative h-20 w-auto"}>
+          <Link href={"/"} className={"relative h-20 w-auto"}>
             <Image
               type={"contain"}
               src={"/assets/images/gilace-logo.svg"}
               alt={"gilace logo"}
             />
             <span className={"absolute top-40"}>گیلاس</span>
-          </a>
+          </Link>
         </h1>
         <div
           className={

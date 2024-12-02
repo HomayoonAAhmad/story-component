@@ -1,11 +1,11 @@
 "use client";
-import Language from "../locales/Language";
+import Language from "@/gcui-main/locales/Language";
 import Input from "../../stories/Input/Input";
 import Button from "@/stories/Button/Button";
 import { useState } from "react";
-import { Auth_confirmSms, Auth_sendSms } from "../functions/Auth";
+import { Auth_confirmSms, Auth_sendSms } from "@/gcui-main/functions/Auth";
 import { useRouter } from "next/navigation";
-import { AuthStores } from "../stores/AuthStore";
+import { AuthStores } from "@/gcui-main/stores/AuthStore";
 
 const Login = ({ onSuccess = undefined }) => {
   const router = useRouter();

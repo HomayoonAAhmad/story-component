@@ -1,13 +1,18 @@
 "use client";
-import { GetFileType } from "./functions/File";
-import Image from "../stories/Imagee/Image";
+import { GetFileType } from "../../gcui-main/functions/File";
+import Image from "../Imagee/Image";
 import { useState } from "react";
 
 const MediaPreview = ({ content }) => {
   // const items = [
-  // 	content.avatar?(process.env.NEXT_PUBLIC_UPLOAD_URL +"/"+ content.avatar):"assets/images/image-placeholder.svg",
-  // 	...content.files.map((file)=>process.env.NEXT_PUBLIC_UPLOAD_URL +"/"+ file.slug)
-  // ]
+  //   content.avatar
+  //     ? process.env.NEXT_PUBLIC_UPLOAD_URL + "/" + content.avatar
+  //     : "assets/images/image-placeholder.svg",
+  //   ...content.files.map(
+  //     (file) => process.env.NEXT_PUBLIC_UPLOAD_URL + "/" + file.slug
+  //   ),
+  // ];
+
   const items = [
     {
       file: content.avatar

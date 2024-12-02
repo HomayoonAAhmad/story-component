@@ -1,8 +1,8 @@
 "use client";
-import Language from "./locales/Language";
+import Language from "@/gcui-main/locales/Language";
 import { usePathname } from "next/navigation";
 
-interface MenuItemProps {
+export interface MenuItemProps {
   id: number;
   title?: string;
   icon?: string;
