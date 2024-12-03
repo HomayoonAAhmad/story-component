@@ -1,23 +1,27 @@
-import { Meta, StoryFn } from "@storybook/react";
+import React from "react";
 import Empty from "./Empty";
 
 export default {
   title: "Components/Empty",
   component: Empty,
   argTypes: {
-    frequency: { control: "number" },
-    amplitude: { control: "number" },
-    message: { control: "text" },
+    message: {
+      control: "text",
+      description: "Message displayed below the circle",
+    },
+    amplitude: { control: { type: "number" }, description: "Wave amplitude" },
+    frequency: { control: { type: "number" }, description: "Wave frequency" },
   },
-} as Meta<typeof Empty>;
+};
 
-const empty: StoryFn = (args) => (
-  <Empty amplitude={undefined} frequency={undefined} {...args} />
+const story = (args) => (
+  <div dir="ltr">
+    <Empty {...args} />
+  </div>
 );
-
-export const Default = empty.bind({});
+export const Default = story.bind({});
 Default.args = {
-  frequency: 20,
-  amplitude: 1.2,
-  message: "No data available",
+  message: "Loading...",
+  amplitude: 50,
+  frequency: 1.2,
 };
