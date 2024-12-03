@@ -3,9 +3,6 @@ import type { StorybookConfig } from "@storybook/nextjs";
 const config: StorybookConfig = {
   stories: [
     "../stories/**/*.mdx",
-    "../gcui-main/**/*.mdx",
-    "../gcui-main/cards/**/*.mdx",
-    "../gcui-main/forms/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
 

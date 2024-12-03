@@ -1,9 +1,9 @@
-import Blocks from "../../stories/Blocks/Blocks";
+import Blocks from "@/stories/Blocks/Blocks";
 import React, { useEffect } from "react";
 import Language from "@/gcui-main/locales/Language";
 import Button from "@/stories/Button/Button";
 // import { getInvoice } from "../models/InvoiceModel"; // Commented out the API import
-import Loader from "../../stories/Loader/Loader";
+import Loader from "@/stories/Loader/Loader";
 
 const Invoice = ({ invoice }) => {
   const [dbInvoice, setDbInvoice] = React.useState({

@@ -5,12 +5,13 @@ import Modal from "@/stories/Modal/Modal";
 import { Get, Remove } from "@/gcui-main/functions/Basket";
 import { Paragraph } from "@/stories/Typo/Typo";
 import { getPayable } from "@/gcui-main/models/PayableModel";
-import Language from "./locales/Language";
+import Language from "@/gcui-main/locales/Language";
 import ColorTypes from "@/gcui-main/functions/ColorTypes";
 import Button from "@/stories/Button/Button";
 import Login from "@/gcui-main/forms/Login";
 import { AuthStores } from "@/gcui-main/stores/AuthStore";
 import Loader from "@/stories/Loader/Loader";
+import Empty from "@/stories/Empty/Empty";
 
 const Basket = () => {
   const open = useSyncExternalStore(
@@ -109,23 +110,29 @@ const Basket = () => {
       zindex={10}
     >
       <div className={"p-4 flex flex-col gap-2"}>
-        <div className={"text-slate-300 pb-2 border-b border-slate-600"}>
-          <Paragraph element={"div"}>سبد خرید</Paragraph>
+        <div
+          className={
+            "text-slate-300 pb-2 border-b border-slate-600/20 text-xl font-bold"
+          }
+        >
+          <div>{Language().basket}</div>
         </div>
-        <div className={"pb-2 border-b border-slate-600"}>
+        <div className={"pb-2 border-b border-slate-600/20"}>
           {open &&
             storageBasketItems.map((item, index) => {
-              return <PayableItem key={index} item={item} />;
+              return <PayableItem key={index} item={item.id} />;
             })}
-          {storageBasketItems.length === 0 ? (
-            <div className={"text-center"}>{Language().emptyBasket}</div>
-          ) : (
-            ""
+          {storageBasketItems.length === 0 && (
+            <Empty
+              amplitude={24}
+              frequency={1.2}
+              message={Language().emptyBasket}
+            />
           )}
         </div>
         {!auth && <Login login-for-shopping={true} />}
         {auth && (
-          <div>
+          <div className={"flex justify-end"}>
             <Button
               onClick={() => {
                 setLoadingContinue(true);

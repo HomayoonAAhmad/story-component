@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../gcui-main/styles/tailwind/globals.css";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script src="https://unpkg.com/flubber@0.3.0"></script>
+        <Script src="https://unpkg.com/flubber@0.3.0" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
