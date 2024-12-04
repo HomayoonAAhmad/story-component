@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Confirm from "@/gcui-main/Confirm";
+import Confirm from "@/stories/Confirm/Confirm";
 import Button from "@/stories/Button/Button"; // Adjust the import path as needed
 
 export default function ConfirmPage() {

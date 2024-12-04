@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
-import Language from "./locales/Language";
-import language from "./locales/Language";
-import { H1, Paragraph } from "../stories/Typo/Typo";
+import language from "@/gcui-main/locales/Language";
+import Language from "@/gcui-main/locales/Language";
+import { H1, Paragraph } from "@/stories/Typo/Typo";
 import Button from "@/stories/Button/Button";
-import ColorTypes from "./functions/ColorTypes";
-import Add from "./functions/Basket";
-import { BasketStores } from "./stores/BasketStore";
+import ColorTypes from "@/gcui-main/functions/ColorTypes";
+import Add from "@/gcui-main/functions/Basket";
+import { BasketStores } from "@/gcui-main/stores/BasketStore";
 
 const Plans = ({ plans }) => {
   const [activePlan, setActivePlan] = useState("monthly");

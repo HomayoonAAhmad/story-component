@@ -1,6 +1,6 @@
-import Button from "@/stories/Button/Button";
-import ColorTypes from "./functions/ColorTypes";
-import Language from "./locales/Language";
+import Button from "../Button/Button";
+import ColorTypes from "@/gcui-main/functions/ColorTypes";
+import Language from "@/gcui-main/locales/Language";
 import React, { useEffect, useRef } from "react";
 
 const Confirm = ({ message, onConfirm, children }) => {

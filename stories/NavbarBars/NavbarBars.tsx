@@ -1,5 +1,5 @@
 "use client";
-import { MenuStores } from "./stores/menuStore";
+import { MenuStores } from "@/gcui-main/stores/menuStore";
 
 const NavbarBars = () => {
   return (

@@ -1,22 +1,23 @@
-import MenuItem from "@/stories/MenuItem/MenuItem";
+import MenuItem from "../MenuItem/MenuItem";
 import Button from "../Button/Button";
 import SearchForm from "../SearchFrom/SearchForm";
 import ColorTypes from "@/gcui-main/functions/ColorTypes";
 import Image from "../Imagee/Image";
-import NavbarBars from "@/gcui-main/NavbarBars";
+import NavbarBars from "../NavbarBars/NavbarBars";
 import ActionBarDesktop from "../ActionBarDesktop/ActionBarDesktop";
-import Device from "@/gcui-main/functions/Device";
 import Link from "next/link";
 
-//just in development :
-export const fetchCache = "force-no-store";
+// Development-only cache setting
+// export const fetchCache = "force-no-store";
+
+// Toggle isMobile for development
+let isMobile = false; // Change this to true or false for testing
 
 type authBlockProps = {
   [Language: string]: any;
 };
 
-const AuthBlock = async () => {
-  let isMobile = await Device();
+const AuthBlock = () => {
   if (isMobile) {
     return (
       <div className={"flex gap-2"}>
@@ -33,19 +34,22 @@ const AuthBlock = async () => {
   }
   return <ActionBarDesktop />;
 };
-const Nav = async ({ Language, menu }) => {
-  let isMobile = await Device();
+
+const Nav = ({ Language, menu }) => {
   let menuItems = [];
   let activeId = 1;
+
+  // Sample menu logic for testing
   // try {
   //   let data = JSON.parse(menu.meta);
   //   menuItems = data.menu;
   // } catch (e) {
   //   console.log(e);
   // }
+
   if (isMobile) {
     return (
-      <div className={"container mx-auto  z-20 sticky top-0"}>
+      <div className={"container mx-auto z-20 sticky top-0"}>
         <div className={"flex h-16 w-screen"}>
           <div className={"flex justify-between items-center w-full px-2"}>
             <ul className={"flex gap-2 items-center"}>
@@ -77,15 +81,16 @@ const Nav = async ({ Language, menu }) => {
         </div>
         <div
           className={
-            "backdrop-blur-3xl v-mask  w-full h-full absolute top-0 left-0 -z-10"
+            "backdrop-blur-3xl v-mask w-full h-full absolute top-0 left-0 -z-10"
           }
         />
       </div>
     );
   }
+
   return (
-    <div className={"container mx-auto  z-20 sticky top-0"}>
-      <nav className={"flex gap-3 "}>
+    <div className={"container mx-auto z-20 sticky top-0"}>
+      <nav className={"flex gap-3"}>
         <h1 className={"overflow-hidden h-20 w-20"}>
           <Link href={"/"} className={"relative h-20 w-auto"}>
             <Image
@@ -102,13 +107,11 @@ const Nav = async ({ Language, menu }) => {
           }
         >
           <ul className={"flex items-center gap-2"}>
-            {menuItems.map((item, index) => {
-              return (
-                <div key={item.id}>
-                  <MenuItem item={item} />
-                </div>
-              );
-            })}
+            {menuItems.map((item, index) => (
+              <div key={item.id}>
+                <MenuItem item={item} />
+              </div>
+            ))}
           </ul>
           <ul className={"flex items-center"}>
             <li>
@@ -128,4 +131,5 @@ const Nav = async ({ Language, menu }) => {
     </div>
   );
 };
+
 export default Nav;

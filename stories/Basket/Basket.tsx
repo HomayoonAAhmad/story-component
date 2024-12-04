@@ -8,7 +8,7 @@ import { Paragraph } from "@/stories/Typo/Typo";
 import Language from "@/gcui-main/locales/Language";
 import ColorTypes from "@/gcui-main/functions/ColorTypes";
 import Button from "@/stories/Button/Button";
-import Login from "@/gcui-main/forms/Login";
+import Login from "@/stories/Login/Login";
 // import { AuthStores } from "@/gcui-main/stores/AuthStore";
 import Loader from "@/stories/Loader/Loader";
 import Empty from "@/stories/Empty/Empty";
