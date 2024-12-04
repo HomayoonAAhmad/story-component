@@ -1,5 +1,5 @@
-import Language from "./locales/Language";
-import Plans from "./Plans";
+import Language from "@/gcui-main/locales/Language";
+import Plans from "@/gcui-main/Plans";
 import Tab from "@/stories/Tab/Tab";
 
 const NotificationBox = () => {

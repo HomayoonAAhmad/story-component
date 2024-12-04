@@ -7,7 +7,7 @@ import ActionBarBasket from "../ActionBarBasket/ActionBarBasket";
 import { useEffect, useState, useRef, useSyncExternalStore } from "react";
 import { AuthStores } from "@/gcui-main/stores/AuthStore";
 import Blocks from "../Blocks/Blocks";
-import NotificationBox from "@/gcui-main/NotificationBox";
+import NotificationBox from "../NotificationBox/NotificationBox";
 import colorTypes from "@/gcui-main/functions/ColorTypes";
 
 const ActionBar = () => {

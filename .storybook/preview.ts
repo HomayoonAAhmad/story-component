@@ -9,7 +9,7 @@ const customTheme = create({
   textColor: "#f1f5f9", // slate-100 text color
   barBg: "#1e293b", // Toolbar background
   barTextColor: "#f1f5f9", // Toolbar text color
-  barSelectedColor: "#94a3b8", // Optional: slate-400 for selected tab color
+  barSelectedColor: "#94a3b8", // slate-400 for selected tab color
   brandTitle: "My Custom Storybook",
   brandUrl: "https://example.com",
 });
@@ -34,7 +34,8 @@ const preview: Preview = {
     "autodocs",
     "autodocs",
     "autodocs",
-    "autodocs"
+    "autodocs",
+    "autodocs",
   ],
 };
 

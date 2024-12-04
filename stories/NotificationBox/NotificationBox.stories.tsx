@@ -1,5 +1,5 @@
 import React from "react";
-import NotificationBox from "@/gcui-main/NotificationBox";
+import NotificationBox from "./NotificationBox";
 import Tab from "@/stories/Tab/Tab";
 
 export default {
@@ -9,7 +9,6 @@ export default {
 
 const notifBox = (args) => <NotificationBox {...args} />;
 
-// Custom scenario with additional controls if needed
 export const CustomHeaders = () => {
   const customHeaders = [
     <div key={1} className={"flex gap-2"}>

@@ -24,7 +24,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// Dark Block Stories
 export const DarkBlock: Story = {
   args: {
     children: "Dark Block Content",
@@ -41,7 +40,6 @@ export const DarkBlockParticular: Story = {
   },
 };
 
-// Gradient Block Stories
 export const GradientBlock: Story = {
   render: (args) => <Block.Gradient {...args} />,
   args: {
@@ -60,7 +58,6 @@ export const GradientBlockParticular: Story = {
   },
 };
 
-// Bordered Block Stories
 export const BorderedBlock: Story = {
   render: (args) => <Block.Bordered {...args} />,
   args: {
@@ -79,7 +76,6 @@ export const BorderedBlockParticular: Story = {
   },
 };
 
-// Examples with different content and styling
 export const WithLongContent: Story = {
   render: (args) => (
     <Block.Dark {...args} className="max-w-md">

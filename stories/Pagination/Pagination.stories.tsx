@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Meta, StoryFn } from "@storybook/react";
-import Pagination, { PaginationProps } from "./Pagination"; // Adjust path as needed
+import Pagination, { PaginationProps } from "./Pagination";
 
 export default {
   title: "Components/Pagination",
@@ -28,7 +28,7 @@ const Template: StoryFn<PaginationProps> = (args: PaginationProps) => {
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    args.onPageChange(page); // Trigger Storybook action
+    args.onPageChange(page);
   };
 
   return (
