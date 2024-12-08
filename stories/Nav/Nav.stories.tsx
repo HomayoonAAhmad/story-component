@@ -1,33 +1,33 @@
 import React from "react";
-import Nav from "./Nav"; // Adjust the path to where your Nav component is located
+import Nav from "./Nav"; // Update the path based on your file structure
+import { Meta, StoryFn } from "@storybook/react";
+import { isMobile } from "react-device-detect";
 
 export default {
   title: "Components/Nav",
   component: Nav,
+  parameters: {
+    layout: "fullscreen",
+  },
   argTypes: {
     isMobile: {
       control: "boolean",
-      description: "Toggle between mobile and desktop views",
+      defaultValue: false,
+      description: "Toggles between mobile and desktop view.",
     },
   },
-};
+} as Meta<typeof Nav>;
 
-// Template for the Nav component
-const Template = (args) => {
-  // Override the isMobile logic for testing
-  global.isMobile = args.isMobile; // Mock the isMobile global variable
-  return <Nav {...args} />;
-};
+const nav: StoryFn = (args) => (
+  <Nav Language={"fa"} menu={undefined} {...args} />
+);
 
-export const DesktopView = Template.bind({});
-DesktopView.args = {
-  Language: "fa",
-
-  isMobile: false,
-};
-
-export const MobileView = Template.bind({});
-MobileView.args = {
-  Language: "fa",
+export const Desktop = nav.bind({});
+Desktop.args = {
   isMobile: true,
 };
+
+// export const Mobile = nav.bind({});
+// Mobile.args = {
+//   isMobile: false,
+// };

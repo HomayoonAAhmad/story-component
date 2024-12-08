@@ -17,7 +17,7 @@ export default function Page() {
       dir="rtl"
       className="relative flex mx-auto mt-10 justify-center items-center"
     >
-      <ActionBarDesktop />
+      <Nav Language={"fa"} menu={undefined} />
       {/* <NotificationBox /> */}
       {/* <Login /> */}
       {/* <Nav Language={""} menu={undefined} /> 
