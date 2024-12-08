@@ -58,7 +58,7 @@ const Modal: React.FC<ModalProps> = ({
     if (typeof onClose === "function") {
       onClose();
     }
-    await Delay(280);
+    await Delay(2800);
     setModalClass("hidden");
   };
 
