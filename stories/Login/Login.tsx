@@ -11,7 +11,7 @@ type login = {
   beforShopping?: boolean;
 };
 const Login = ({ beforShopping = false }: login) => {
-  const router = useRouter();
+  // const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState(1);
   const [mobile, setMobile] = useState("");

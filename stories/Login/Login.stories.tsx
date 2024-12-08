@@ -3,7 +3,7 @@ import { Meta, StoryFn } from "@storybook/react";
 import Login from "./Login";
 
 export default {
-  title: "Components/Login",
+  title: "Forms/Login",
   component: Login,
   argTypes: {
     beforShopping: {
@@ -13,8 +13,11 @@ export default {
   },
 } as Meta<typeof Login>;
 
-const login: StoryFn<typeof Login> = (args) => <Login {...args} />;
-
+const login: StoryFn<typeof Login> = (args) => (
+  <div className="relative">
+    <Login {...args} />
+  </div>
+);
 export const Default = login.bind({});
 Default.args = {
   beforShopping: false,
