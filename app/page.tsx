@@ -1,15 +1,7 @@
 "use client";
 
-import Confirm from "@/stories/Confirm/Confirm";
-import Map from "@/gcui-main/Map";
 import Nav from "@/stories/Nav/Nav";
-import SearchForm from "@/stories/SearchFrom/SearchForm";
-import Basket from "@/stories/Basket/Basket";
-import Empty from "@/stories/Empty/Empty";
-import Login from "@/stories/Login/Login";
-import NotificationBox from "@/stories/NotificationBox/NotificationBox";
-import ActionBarDesktop from "@/stories/ActionBarDesktop/ActionBarDesktop";
-import NavStories from "@/stories/Nav/Nav.stories";
+import PageTransition from "@/stories/PageTransiton/PageTransition";
 
 export default function Page() {
   return (
@@ -17,7 +9,8 @@ export default function Page() {
       dir="rtl"
       className="relative flex mx-auto mt-10 justify-center items-center"
     >
-      <Nav Language={"fa"} menu={undefined} />
+      <PageTransition />
+      {/* <Nav Language={"fa"} menu={undefined} /> */}
       {/* <NotificationBox /> */}
       {/* <Login /> */}
       {/* <Nav Language={""} menu={undefined} /> 

@@ -6,7 +6,7 @@ import { redirect, useSearchParams } from "next/navigation";
 
 const Search = ({ setSearch }) => {
   const searchParams = useSearchParams();
-  const keyword = searchParams.get("keyword");
+  const keyword = "";
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

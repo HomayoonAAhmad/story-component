@@ -23,7 +23,9 @@ export default function SearchForm() {
         name={"search-modal"}
         zindex={10}
       >
-        <div className={"p-4"}>{/* <Search /> */}</div>
+        <div className={"p-4"}>
+          <Search />
+        </div>
       </Modal>
     </div>
   );
