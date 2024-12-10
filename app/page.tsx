@@ -9,12 +9,11 @@ export default function Page() {
       dir="rtl"
       className="relative flex mx-auto mt-10 justify-center items-center"
     >
-      <PageTransition />
+      {/* <PageTransition /> */}
       {/* <Nav Language={"fa"} menu={undefined} /> */}
       {/* <NotificationBox /> */}
       {/* <Login /> */}
-      {/* <Nav Language={""} menu={undefined} /> 
-       <SearchForm /> */}
+      {/* <Nav Language={""} menu={undefined} /> */}
       {/* <Confirm message={"undefined"} onConfirm={"/"} children={"undefined"} /> */}
     </div>
   );

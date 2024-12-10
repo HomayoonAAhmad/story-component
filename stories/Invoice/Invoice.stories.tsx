@@ -55,16 +55,16 @@ export default {
   component: Invoice,
 };
 
-const Template = (args) => <Invoice {...args} />;
+const invoice = (args) => <Invoice {...args} />;
 
-export const Pending = Template.bind({});
+export const Pending = invoice.bind({});
 Pending.args = { invoice: createMockInvoice("pending") };
 
-export const Warning = Template.bind({});
+export const Warning = invoice.bind({});
 Warning.args = { invoice: createMockInvoice("warning") };
 
-export const Danger = Template.bind({});
+export const Danger = invoice.bind({});
 Danger.args = { invoice: createMockInvoice("danger") };
 
-export const Expired = Template.bind({});
+export const Expired = invoice.bind({});
 Expired.args = { invoice: createMockInvoice("expired") };

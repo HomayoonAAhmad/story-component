@@ -20,35 +20,35 @@ export default {
   },
 } as Meta<typeof InlineMessage>;
 
-const Template: StoryFn<InlineMessageProps> = (args) => (
+const inLineMessage: StoryFn<InlineMessageProps> = (args) => (
   <InlineMessage {...args} />
 );
 
-export const Default = Template.bind({});
+export const Default = inLineMessage.bind({});
 Default.args = {
   message: "This is a default message.",
   color: ColorTypes.default,
 };
 
-export const Primary = Template.bind({});
+export const Primary = inLineMessage.bind({});
 Primary.args = {
   message: "This is a primary message.",
   color: ColorTypes.primary,
 };
 
-export const Danger = Template.bind({});
+export const Danger = inLineMessage.bind({});
 Danger.args = {
   message: "This is a danger message.",
   color: ColorTypes.danger,
 };
 
-export const Success = Template.bind({});
+export const Success = inLineMessage.bind({});
 Success.args = {
   message: "This is a success message.",
   color: ColorTypes.success,
 };
 
-export const DangerLong = Template.bind({});
+export const DangerLong = inLineMessage.bind({});
 DangerLong.args = {
   message:
     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius voluptatum eligendi, quam perferendis consequatur delectus dolor ex temporibus, aspernatur vel deleniti necessitatibus explicabo pariatur! Blanditiis assumenda rem optio amet nam.",

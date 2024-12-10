@@ -1,8 +1,8 @@
 import { Meta, StoryFn } from "@storybook/react";
-import PageTransition from "./PageTransition";
 import { useState } from "react";
 import Pagination, { PaginationProps } from "../Pagination/Pagination";
 import { H1 } from "../Typo/Typo";
+import PageTransition from "./PageTransition";
 
 export default {
   title: "Components/PageTransition",
@@ -12,7 +12,7 @@ export default {
 const PageTransitionStory: StoryFn<PaginationProps> = (
   args: PaginationProps
 ) => {
-  const [currentPage, setCurrentPage] = useState(args.currentPage || 1);
+  const [currentPage, setCurrentPage] = useState(args.currentPage);
   const [showTransition, setShowTransition] = useState(false);
 
   const handlePageChange = (page: number) => {
@@ -21,7 +21,7 @@ const PageTransitionStory: StoryFn<PaginationProps> = (
     setTimeout(() => {
       setCurrentPage(page);
       setShowTransition(false);
-    }, 1000);
+    }, 1500);
   };
 
   return (

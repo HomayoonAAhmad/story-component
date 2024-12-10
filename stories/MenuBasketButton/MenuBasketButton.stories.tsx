@@ -14,21 +14,21 @@ export default {
   },
 } as Meta<MenuBasketButtonProps>;
 
-const Template: StoryFn<MenuBasketButtonProps> = (args) => (
+const menuBasketButton: StoryFn<MenuBasketButtonProps> = (args) => (
   <MenuBasketButton {...args} />
 );
 
-export const Default = Template.bind({});
+export const Default = menuBasketButton.bind({});
 Default.args = {
   totalBasket: 5, // Default totalBasket value
 };
 
-export const EmptyBasket = Template.bind({});
+export const EmptyBasket = menuBasketButton.bind({});
 EmptyBasket.args = {
   totalBasket: 0, // No items in the basket
 };
 
-export const FilledBasket = Template.bind({});
+export const FilledBasket = menuBasketButton.bind({});
 FilledBasket.args = {
   totalBasket: 15, // A filled basket
 };
