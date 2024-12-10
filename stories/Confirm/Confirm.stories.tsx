@@ -1,39 +1,57 @@
 import React from "react";
+import { Meta, StoryObj } from "@storybook/react";
 import Confirm from "./Confirm";
-import Button from "@/stories/Button/Button";
+import Button from "../Button/Button";
 import ColorTypes from "@/gcui-main/functions/ColorTypes";
 
-export default {
+const meta = {
   title: "Components/Confirm",
   component: Confirm,
+  tags: ["autodocs"],
+  args: {
+    message: "Are you sure you want to proceed?",
+  },
   argTypes: {
     message: {
       control: "text",
-      description: "Message to display in the confirmation dialog",
+      description: "Message displayed in the confirmation dialog.",
     },
     onConfirm: {
       action: "confirmed",
-      description: "Callback triggered when the confirm button is clicked",
+      description: "Callback when user confirms the action.",
     },
     children: {
       control: "text",
-      description: "Content to trigger the confirmation dialog",
+      description: "Content for the toggle element.",
     },
+  },
+} as Meta<typeof Confirm>;
+
+export default meta;
+
+type Story = StoryObj<typeof Confirm>;
+
+export const Default: Story = {
+  args: {
+    children: <Button>Click me</Button>,
   },
 };
 
-const confirm = (args) => <Confirm {...args} />;
-
-export const Default = confirm.bind({});
-Default.args = {
-  message: "Are you sure you want to continue?",
-  onConfirm: () => alert("Confirmed!"),
-  children: <Button color={ColorTypes.default}>Click Me</Button>,
+export const CustomMessage: Story = {
+  args: {
+    message:
+      "Do you really want to delete this item? This action cannot be undone.",
+    children: <Button>Delete</Button>,
+  },
 };
 
-export const CustomMessage = confirm.bind({});
-CustomMessage.args = {
-  message: "This action is irreversible. Proceed?",
-  onConfirm: () => alert("Confirmed with custom message!"),
-  children: <Button color={ColorTypes.primary}>Delete</Button>,
+export const ComplexTrigger: Story = {
+  render: (args) => (
+    <Confirm {...args}>
+      <Button color={ColorTypes.dark}>submit</Button>
+    </Confirm>
+  ),
+  args: {
+    message: "Are you absolutely certain about this?",
+  },
 };
