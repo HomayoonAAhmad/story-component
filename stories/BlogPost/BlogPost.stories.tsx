@@ -28,7 +28,7 @@ const sampleBlog = {
   avatar: "path/to/sample-image.jpg", // Placeholder path
   created_at: new Date().toISOString(),
   user: {
-    name: "John Doe",
+    name: "A person",
     avatar: null,
   },
   meta: JSON.stringify({

@@ -29,15 +29,15 @@ const meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof Confirm>;
+type confirm = StoryObj<typeof Confirm>;
 
-export const Default: Story = {
+export const Default: confirm = {
   args: {
     children: <Button>Click me</Button>,
   },
 };
 
-export const CustomMessage: Story = {
+export const CustomMessage: confirm = {
   args: {
     message:
       "Do you really want to delete this item? This action cannot be undone.",
@@ -45,7 +45,7 @@ export const CustomMessage: Story = {
   },
 };
 
-export const ComplexTrigger: Story = {
+export const ComplexTrigger: confirm = {
   render: (args) => (
     <Confirm {...args}>
       <Button color={ColorTypes.dark}>submit</Button>

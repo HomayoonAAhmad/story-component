@@ -8,6 +8,6 @@ const meta: Meta<typeof ActionBarDesktop> = {
 
 export default meta;
 
-type Story = StoryObj<typeof ActionBarDesktop>;
+type actionBarDesktop = StoryObj<typeof ActionBarDesktop>;
 
-export const Default: Story = {};
+export const Default: actionBarDesktop = {};

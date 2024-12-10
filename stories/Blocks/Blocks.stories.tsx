@@ -22,9 +22,9 @@ const meta = {
 } as Meta<typeof Block.Dark>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type block = StoryObj<typeof meta>;
 
-export const DarkBlock: Story = {
+export const DarkBlock: block = {
   args: {
     children: "Dark Block Content",
     particular: false,
@@ -32,7 +32,7 @@ export const DarkBlock: Story = {
   },
 };
 
-export const DarkBlockParticular: Story = {
+export const DarkBlockParticular: block = {
   args: {
     children: "Dark Block with Particular Styling",
     particular: true,
@@ -40,7 +40,7 @@ export const DarkBlockParticular: Story = {
   },
 };
 
-export const GradientBlock: Story = {
+export const GradientBlock: block = {
   render: (args) => <Block.Gradient {...args} />,
   args: {
     children: "Gradient Block Content",
@@ -49,7 +49,7 @@ export const GradientBlock: Story = {
   },
 };
 
-export const GradientBlockParticular: Story = {
+export const GradientBlockParticular: block = {
   render: (args) => <Block.Gradient {...args} />,
   args: {
     children: "Gradient Block with Particular Styling",
@@ -58,7 +58,7 @@ export const GradientBlockParticular: Story = {
   },
 };
 
-export const BorderedBlock: Story = {
+export const BorderedBlock: block = {
   render: (args) => <Block.Bordered {...args} />,
   args: {
     children: "Bordered Block Content",
@@ -67,7 +67,7 @@ export const BorderedBlock: Story = {
   },
 };
 
-export const BorderedBlockParticular: Story = {
+export const BorderedBlockParticular: block = {
   render: (args) => <Block.Bordered {...args} />,
   args: {
     children: "Bordered Block with Particular Styling",
@@ -76,7 +76,7 @@ export const BorderedBlockParticular: Story = {
   },
 };
 
-export const WithLongContent: Story = {
+export const WithLongContent: block = {
   render: (args) => (
     <Block.Dark {...args} className="max-w-md">
       <h2 className="text-xl font-bold mb-2">Title Example</h2>
@@ -89,7 +89,7 @@ export const WithLongContent: Story = {
   ),
 };
 
-export const CustomStyling: Story = {
+export const CustomStyling: block = {
   render: (args) => (
     <Block.Dark {...args} className="bg-opacity-75 p-6">
       Custom styled content with different padding and opacity
@@ -97,7 +97,7 @@ export const CustomStyling: Story = {
   ),
 };
 
-export const WithNestedBlocks: Story = {
+export const WithNestedBlocks: block = {
   render: (args) => (
     <Block.Gradient className="p-6">
       <Block.Bordered className="mb-4">

@@ -17,22 +17,6 @@ export default {
   },
 } as Meta;
 
-const form: StoryFn<FormProps> = (args) => <Form {...args}></Form>;
-
-export const Create = form.bind({});
-Create.args = {
-  title: "Create Form",
-  type: "create",
-  loading: false,
-};
-
-export const Edit = form.bind({});
-Edit.args = {
-  title: "Edit Form",
-  type: "edit",
-  loading: false,
-};
-
 const formWithContent: StoryFn<FormProps> = (args) => (
   <div className="">
     <Form {...args}>
@@ -89,6 +73,22 @@ const formWithContent: StoryFn<FormProps> = (args) => (
 
 export const withcontent = formWithContent.bind({});
 withcontent.args = {
+  title: "Edit Form",
+  type: "edit",
+  loading: false,
+};
+
+const form: StoryFn<FormProps> = (args) => <Form {...args}></Form>;
+
+export const Create = form.bind({});
+Create.args = {
+  title: "Create Form",
+  type: "create",
+  loading: false,
+};
+
+export const Edit = form.bind({});
+Edit.args = {
   title: "Edit Form",
   type: "edit",
   loading: false,
